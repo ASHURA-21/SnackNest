@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+.wrapper {
+  background: #E28413;
+  color: #EDF2EF;
+  padding: 8px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  z-index: 999;
+  font-family: 'Fredoka';
+}
+
+.ticker {
+  display: flex;
+  white-space: nowrap;
+}
+
+.content {
+  display: flex;
+  animation: scroll-left 30s linear infinite;
+}
+
+.item {
+  margin-right: 30px;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

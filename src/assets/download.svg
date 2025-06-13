@@ -1,0 +1,15 @@
+<svg width="220" height="60" viewBox="0 0 220 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .text { font-family: 'Poppins', sans-serif; font-size: 28px; font-weight: 600; fill: #FF5722; }
+    .bite { fill: #FF9800; }
+  </style>
+  <!-- Snack circle icon -->
+  <circle cx="30" cy="30" r="20" fill="#FF5722"></circle>
+  <!-- Bite marks -->
+  <circle cx="40" cy="25" r="6" class="bite"></circle>
+  <circle cx="38" cy="36" r="4" class="bite"></circle>
+  <circle cx="45" cy="32" r="3" class="bite"></circle>
+
+  <!-- Brand text -->
+  <text x="50" y="40" class="text">SnackNest</text>
+</svg>
