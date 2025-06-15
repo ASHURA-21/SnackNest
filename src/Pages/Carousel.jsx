@@ -4,7 +4,6 @@ import Jollof1 from '../assets/Jollof1.jpeg'
 import Kitchen from '../assets/Kitchen.jpg'
 import Avocado from '../assets/Avocado.jpg'
 import Baker from '../assets/Baker.jpg'
-import {Button, ButtonGroup} from "@heroui/button";
 import { useEffect } from 'react'
 
 export default function Carousel(){
@@ -30,7 +29,7 @@ useEffect(() => {
   }, []);
     return(
 <>
-           <div className="slider">
+            <div className="slider" >
         <div className="list">
             <div className="item active">
                 <img src={Food}/>
@@ -40,6 +39,7 @@ useEffect(() => {
                     <p>
                         Check out our new recipes, smoothies, healthy, delicious meals and more
                     </p>
+                      <button className="carousel-btn">Check it out</button>
                 </div>
             </div>
             <div className="item">
@@ -50,6 +50,7 @@ useEffect(() => {
                     <p>
                         Check out our new Jollof rice and asun recipe 
                     </p>
+                      <button className="carousel-btn"> Check it out</button>
                 </div>
             </div>
             <div className="item">
@@ -60,6 +61,7 @@ useEffect(() => {
                     <p>
                         New ovens, Spoons, Frying pans, Equipment for Baking and more
                     </p>
+                      <button className="carousel-btn">Shop Now</button>
                 </div>
             </div>
             <div className="item">
@@ -71,6 +73,7 @@ useEffect(() => {
                         Come check out our new Avocado smoothies
                         Come shop now
                     </p>
+                      <button className="carousel-btn">Shop Now</button>
                 </div>
             </div>
             <div className="item">
@@ -81,6 +84,7 @@ useEffect(() => {
                     <p>
                         New Cake recipes, Varieties of bread and much more
                     </p>
+                      <button className="carousel-btn">Shop Now</button>
                 </div>
             </div>
         </div> 

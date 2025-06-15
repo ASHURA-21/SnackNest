@@ -4,6 +4,8 @@ import About from "./Pages/About"
 import Contact from "./Pages/Contact"
 import Ticker from "./Pages/Ticker"
 import nest from "./assets/download.svg"
+import Recipes from "./Pages/Recipes"
+import Shop from "./Pages/Shop"
 
 function App() {
 
@@ -15,6 +17,8 @@ function App() {
 <ul className="nav-list">
   <li className="nav-links"><Link to="/">Home</Link></li>
   <li className="nav-links"><Link to="/about">About Us</Link></li>
+  <li className="nav-links"><Link to="/Recipes">Recipes</Link></li>
+  <li className="nav-links"><Link to="/shop">Shop now</Link></li>
   <li className="nav-links"><Link to="/contact">Contact us</Link></li>
 </ul>
 
@@ -27,9 +31,10 @@ function App() {
 <Routes>
   <Route path="/" element={<Home/>}/>
   <Route path="/about" element={<About/>}/>
+  <Route path="/Recipes" element={<Recipes/>}/>
+  <Route path="/shop" element={<Shop/>}/>
   <Route path="/contact" element={<Contact/>}/>
 </Routes>
-    
     </>
   )
 }
