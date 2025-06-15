@@ -39,7 +39,7 @@ useEffect(() => {
                     <p>
                         Check out our new recipes, smoothies, healthy, delicious meals and more
                     </p>
-                      <button className="carousel-btn">Check it out</button>
+                     <button class="btn">Shop now</button>
                 </div>
             </div>
             <div className="item">
@@ -50,7 +50,7 @@ useEffect(() => {
                     <p>
                         Check out our new Jollof rice and asun recipe 
                     </p>
-                      <button className="carousel-btn"> Check it out</button>
+                      <button class="btn"> Shop now</button>
                 </div>
             </div>
             <div className="item">
@@ -61,7 +61,7 @@ useEffect(() => {
                     <p>
                         New ovens, Spoons, Frying pans, Equipment for Baking and more
                     </p>
-                      <button className="carousel-btn">Shop Now</button>
+                      <button class="btn"> Shop now</button>
                 </div>
             </div>
             <div className="item">
@@ -73,7 +73,7 @@ useEffect(() => {
                         Come check out our new Avocado smoothies
                         Come shop now
                     </p>
-                      <button className="carousel-btn">Shop Now</button>
+                      <button class="btn"> Shop now</button>
                 </div>
             </div>
             <div className="item">
@@ -84,7 +84,7 @@ useEffect(() => {
                     <p>
                         New Cake recipes, Varieties of bread and much more
                     </p>
-                      <button className="carousel-btn">Shop Now</button>
+                      <button class="btn"> Shop now</button>
                 </div>
             </div>
         </div> 
