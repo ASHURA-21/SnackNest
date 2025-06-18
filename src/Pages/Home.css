@@ -29,8 +29,12 @@ body{
   
     
   .cards{
-    border-radius: 4rem;
+    /* border-radius: 4rem; */
+    border-top-left-radius: 4rem;
+    border-top-right-radius: 4rem;
     background: var(--bg);
+    height: 754vh;
+    margin-bottom: 30px;
   }
   .cards1 {
   padding: 2rem;
@@ -41,6 +45,7 @@ body{
 }
 .items {
   display: flex;
+  justify-content: center;
   gap: 2rem;
   flex-wrap: wrap;
   margin-top: 1.5rem;
@@ -83,23 +88,9 @@ body{
   font-weight: bold;
   color: var(--accent);
 }
-
-/* .item-card button {
-  background-color: var(--accent);
-  border: none;
-  color: white;
-  padding: 0.5rem 1rem;
-  margin-top: 0.5rem;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background 0.2s ease;
+.link{
+  text-decoration: none;
 }
-
-.item-card button:hover {
-  background-color: var(--highlight);
-  color: #333;
-} */
-/* From Uiverse.io by Mike11jr */ 
 .btn {
  padding: 1.1em 2em;
  background: none;
@@ -142,7 +133,6 @@ body{
  transform: scale(0.9);
 }
 
-/* From Uiverse.io by vinodjangid07 */ 
 .Btn-Container {
   display: flex;
   width: 170px;
@@ -180,6 +170,170 @@ body{
   transition-duration: 1.5s;
 }
 .Btn-Container:hover .icon-Container svg {
+  transition-duration: 1.5s;
+  animation: arrow 1s linear infinite;
+}
+@keyframes arrow {
+  0% {
+    opacity: 0;
+    margin-left: 0px;
+  }
+  100% {
+    opacity: 1;
+    margin-left: 10px;
+  }
+}
+
+.inner{
+    padding-top: 20px;
+  }
+  .inner h2{
+    text-align: center;
+    color: var(--text);
+  }
+  .header{
+    text-align: center;
+    color: var(--text);
+    padding: 1rem;
+    position: relative;
+  }
+  .header:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 100px;
+    background-color: #2ecc71;
+    border-radius: 2px;
+  }
+  .project-container{
+    display: grid;
+    grid-template-columns: repeat(3, 0.2fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem 80px;
+    font-size: 1.2rem;
+  }
+  .project-box{
+    color: var(--text);
+    cursor: pointer;
+  }
+  .project-box:hover > .project-title:after,  .project-box:hover > .project-title:before{
+    width: 35px;
+  }  
+  .project-box:hover .pro-img{
+transform: translateY(-10px);
+  }
+  .project-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+  }
+  .project-title:before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 4px;
+  border-radius: 0 2px 2px 0;
+  background-color: #2ecc71;
+  transition: .5s;
+}
+    .project-title:after{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 50%;
+      width: 0;
+      height: 4px;
+      border-radius: 2px 0 0 2px;
+      background-color: #2ecc71;
+      transition: .5s;
+    }
+  .pro-img{
+    width: 490px;
+    height: 270px;
+    position: relative;
+    border-radius: 45px;
+    /* background-color: #fff; */
+    display: flex;
+    justify-content: center;
+    transition: .5s;
+  }
+  .pro-img:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    /* background: rgba(100, 100, 100, 0.5); */
+  }
+  .project-title h3{
+    color: var(--text);
+    margin: 0.5rem;
+  }
+  .pro-icon{
+    width: 500px;
+    border-radius: 1rem;
+  }
+
+@media screen and (max-width:990px){
+ .project-container{
+  grid-template-columns: repeat((2, 1fr));
+  padding: 2rem 50px;
+ }
+}
+@media screen and (max-width:650px){
+ .project-container{
+  grid-template-columns: repeat((1fr));
+  padding: 2rem 50px;
+ }
+}
+.Btn-Container1 {
+  display: flex;
+  width: 170px;
+  height: fit-content;
+  background-color: var(--accent);
+  border-radius: 40px;
+  box-shadow: 0px 5px 10px #bebebe;
+  justify-content: center;
+  margin-left: 675px;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+}
+.icon-Container1 {
+  width: 45px;
+  height: 45px;
+  background-color: var(--highlight);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  /* border: 3px solid #1d2129; */
+}
+.text1 {
+  width: calc(170px - 45px);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.1em;
+  letter-spacing: 1.2px;
+}
+.icon-Container1 svg {
+  transition-duration: 1.5s;
+}
+.Btn-Container1:hover .icon-Container1 svg {
   transition-duration: 1.5s;
   animation: arrow 1s linear infinite;
 }

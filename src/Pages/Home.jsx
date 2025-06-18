@@ -1,5 +1,9 @@
+import { Link } from 'react-router-dom';
 import Carousel from './Carousel';
+import Shop from './Shop';
+import Recipes from './Recipes';
 import './Home.css'
+import Footer from './Footer';
 import Strawberry from '../assets/Strawberry.jpeg'
 import Mango from '../assets/Mangoes.jpeg'
 import Grapes from '../assets/Grapes.jpeg'
@@ -24,6 +28,9 @@ import Sour from '../assets/Sour.jpeg'
 import Muffin from '../assets/Muffin.jpeg'
 import Cinnamon from '../assets/Cinnamon.jpeg'
 import Banana from '../assets/Banana.jpeg'
+import Jollof1 from '../assets/Jollof1.jpeg'
+import BananaCake from '../assets/BananaCake.jpeg'
+import Chicken from '../assets/Chicken.jpeg'
 
 export default function Home() {
   return (
@@ -87,6 +94,7 @@ export default function Home() {
 </button>
     </div>
 
+<Link className="link" to="/Shop">
 <button className="Btn-Container">
   <span className="text">View More</span>
   <span className="icon-Container">
@@ -109,7 +117,7 @@ export default function Home() {
       <circle cx="5.73583" cy="17.3868" r="1.5" fill="black"></circle>
     </svg>
   </span>
-</button>
+</button></Link>
 </div>
 </div>
 
@@ -168,6 +176,7 @@ export default function Home() {
       <button className="btn"> Add to Cart</button>
     </div>
 
+<Link className="link" to="/Shop">
 <button className="Btn-Container">
   <span className="text">View More</span>
   <span className="icon-Container">
@@ -190,7 +199,7 @@ export default function Home() {
       <circle cx="5.73583" cy="17.3868" r="1.5" fill="black"></circle>
     </svg>
   </span>
-</button>
+</button></Link>
 </div>
 </div>
 
@@ -206,7 +215,7 @@ export default function Home() {
       <h3>Jollof Rice with Plantain</h3>
       <span>Party-style jollof rice served with fried plantain and grilled chicken.</span>
       <p>₦2,500</p>
-      <button className="btn"> Add to Cart</button>
+      <button className="btn">Add to Cart</button>
     </div>
 
         <div className="item-card">
@@ -249,6 +258,7 @@ export default function Home() {
       <button className="btn"> Add to Cart</button>
     </div>
 
+<Link className="link" to="/Shop">
 <button className="Btn-Container">
   <span className="text">View More</span>
   <span className="icon-Container">
@@ -271,7 +281,7 @@ export default function Home() {
       <circle cx="5.73583" cy="17.3868" r="1.5" fill="black"></circle>
     </svg>
   </span>
-</button>
+</button></Link>
 </div>
 </div>
 
@@ -329,6 +339,7 @@ export default function Home() {
       <button className="btn"> Add to Cart</button>
     </div>
 
+<Link className="link" to="/Shop">
 <button className="Btn-Container">
   <span className="text">View More</span>
   <span className="icon-Container">
@@ -351,10 +362,75 @@ export default function Home() {
       <circle cx="5.73583" cy="17.3868" r="1.5" fill="black"></circle>
     </svg>
   </span>
-</button>
+</button></Link>
 </div>
 </div>
+
+{/* Recipes */}
+<div className="inner">
+        <div className="header">
+            <h1>Recipes from our Chefs</h1>
+        </div>
+          <h2>Featured Recipes</h2>
+        <div className="project-container">
+            <div className="project-box">
+                <div className="project-title">
+                    <div className="pro-img">
+                        <img src={Jollof1} alt="Jollof1" className='pro-icon'/>
+                    </div>
+                    <h3>Jollof rice with Asun</h3>
+                </div>
+                <p>A bold and flavorful West African classic, featuring spicy, smoky jollof rice paired with tender, peppered goat meat (asun). Perfectly seasoned and irresistibly delicious – a true party favorite!</p>
+                   <button className="btn">Read More</button>
+            </div>
+                <div className="project-box">
+                <div className="project-title">
+                    <div className="pro-img">
+                        <img src={BananaCake} alt="BananaCake" className='pro-icon'/>
+                    </div>
+                    <h3>Banana Pancakes</h3>
+                </div>
+                <p>Fluffy, golden pancakes infused with ripe bananas for a naturally sweet and comforting breakfast. Perfect with a drizzle of honey or a scoop of whipped cream!</p>
+                   <button className="btn">Read More</button>
+            </div>
+                 <div className="project-box">
+                <div className="project-title">
+                    <div className="pro-img">
+                        <img src={Chicken} alt="Chicken" className='pro-icon'/>
+                    </div>
+                    <h3>Oven-Roasted Chicken Wings</h3>
+                </div>
+                <p>Crispy on the outside, juicy on the inside—these perfectly seasoned chicken wings are oven-roasted to golden perfection and packed with flavor in every bite.</p>
+                   <button className="btn">Read More</button>
+            </div>
+        </div>
+    </div>  
+  <Link className="link" to="/Recipes">
+  <button className="Btn-Container1">
+  <span className="text1">Read More Recipes</span>
+  <span className="icon-Container1">
+    <svg
+      width="16"
+      height="19"
+      viewBox="0 0 16 19"
+      fill="nones"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle cx="1.61321" cy="1.61321" r="1.5" fill="black"></circle>
+      <circle cx="5.73583" cy="1.61321" r="1.5" fill="black"></circle>
+      <circle cx="5.73583" cy="5.5566" r="1.5" fill="black"></circle>
+      <circle cx="9.85851" cy="5.5566" r="1.5" fill="black"></circle>
+      <circle cx="9.85851" cy="9.5" r="1.5" fill="black"></circle>
+      <circle cx="13.9811" cy="9.5" r="1.5" fill="black"></circle>
+      <circle cx="5.73583" cy="13.4434" r="1.5" fill="black"></circle>
+      <circle cx="9.85851" cy="13.4434" r="1.5" fill="black"></circle>
+      <circle cx="1.61321" cy="17.3868" r="1.5" fill="black"></circle>
+      <circle cx="5.73583" cy="17.3868" r="1.5" fill="black"></circle>
+    </svg>
+  </span>
+</button></Link>
 </div>
+<Footer></Footer>
     </>
   );
 }

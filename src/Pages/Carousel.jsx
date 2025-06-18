@@ -1,4 +1,11 @@
+import { Link } from 'react-router-dom'
 import './Pages.css'
+import Home from "./Home"
+import About from "./About"
+import Contact from "./Contact"
+import nest from "../assets/download.svg"
+import Recipes from "./Recipes"
+import Shop from "./Shop"
 import Food from '../assets/Food.jpg'
 import Jollof1 from '../assets/Jollof1.jpeg'
 import Kitchen from '../assets/Kitchen.jpg'
@@ -39,7 +46,7 @@ useEffect(() => {
                     <p>
                         Check out our new recipes, smoothies, healthy, delicious meals and more
                     </p>
-                     <button class="btn">Shop now</button>
+                    <Link to="/Shop"><button className="btn">Shop now</button></Link>
                 </div>
             </div>
             <div className="item">
@@ -50,7 +57,7 @@ useEffect(() => {
                     <p>
                         Check out our new Jollof rice and asun recipe 
                     </p>
-                      <button class="btn"> Shop now</button>
+                       <Link to="/Shop"><button className="btn">Shop now</button></Link>
                 </div>
             </div>
             <div className="item">
@@ -61,7 +68,7 @@ useEffect(() => {
                     <p>
                         New ovens, Spoons, Frying pans, Equipment for Baking and more
                     </p>
-                      <button class="btn"> Shop now</button>
+                        <Link to="/Shop"><button className="btn">Shop now</button></Link>
                 </div>
             </div>
             <div className="item">
@@ -73,7 +80,7 @@ useEffect(() => {
                         Come check out our new Avocado smoothies
                         Come shop now
                     </p>
-                      <button class="btn"> Shop now</button>
+                        <Link to="/Shop"><button className="btn">Shop now</button></Link>
                 </div>
             </div>
             <div className="item">
@@ -84,7 +91,7 @@ useEffect(() => {
                     <p>
                         New Cake recipes, Varieties of bread and much more
                     </p>
-                      <button class="btn"> Shop now</button>
+                   <Link to="/Shop"><button className="btn">Shop now</button></Link>
                 </div>
             </div>
         </div> 

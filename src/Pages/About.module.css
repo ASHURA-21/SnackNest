@@ -1,0 +1,91 @@
+:root {
+  --bg: #fffaf2;
+  --surface: #ffffff;
+  --text: #333333;
+  --accent: #ffa751;
+  --highlight: #ffe259;
+}
+
+[data-theme='dark'] {
+  --bg: #1c1c1c;
+  --surface: #2a2a2a;
+  --text: #f5f5f5;
+  --accent: #ffa751;
+  --highlight: #ffe259;
+}
+.container1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: var(--surface);
+    border-top-left-radius: 4rem;
+    border-top-right-radius: 4rem;
+}
+
+.image {
+    height: 500px;
+    width: auto;
+    max-width: 100%;
+    display: block;
+    object-fit: contain;
+    border-radius: 60rem;
+    box-shadow: 5.5px 7px 0 var(--accent);
+      transition: ease 0.25s;
+  transition: background-color .3s ease-in-out;
+}
+.image:hover {
+  background-color: var(--highlight);
+}
+.welcome, .about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--text);
+}
+.services{
+    color: var(--text);
+  }
+  .services h2{
+    color: var(--text);
+  }
+  .servicescontainer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+    width: 400px;
+    /* align-items: center; */
+    gap: 2.5rem;
+  }
+
+  .servicebox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--accent);
+    height: 400px;
+    border-radius: 3rem;
+    cursor: pointer;
+    border: 5px solid transparent;
+    transition: 0.4s ease-in-out;
+  }
+  .servicebox h4{
+    text-align: center;
+    font-size: 30px;
+  }
+  .servicebox:hover{
+    background-color: var(--highlight);
+    color:  var(--surface);
+    border: 5px solid var(--accent);
+    transform: scale(1.03);
+  }
+  .serviceinfo{
+    text-align: center;
+  }
+  .serviceinfo i{
+    font-size: 50px;
+    margin-bottom: 1rem;
+  }

@@ -1,0 +1,129 @@
+
+:root {
+  --bg: #fffaf2;
+  --surface: #ffffff;
+  --text: #333333;
+  --accent: #ffa751;
+  --highlight: #ffe259;
+}
+
+[data-theme='dark'] {
+  --bg: #1c1c1c;
+  --surface: #2a2a2a;
+  --text: #f5f5f5;
+  --accent: #ffa751;
+  --highlight: #ffe259;
+}
+.footer-sec{
+  background-color:var(--text);
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-sec .info{
+  display: flex;
+  justify-content:space-around;
+  /* align-items: center; */
+}
+
+.info .info-types{
+  line-height: 40px;
+}
+.mail{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin-top: 100px;
+}
+.mail-info{
+  display: flex;
+  align-items: center;
+}
+.list-items{
+  text-decoration: none;
+  color: var(--surface);
+  transition: ease-in-out .3s;
+}
+.list-items:hover{
+  text-decoration: none;
+  color: var(--accent);
+}
+
+.input {
+  max-width: 190px;
+  padding: 0.875rem;
+  font-size: 1rem;
+  border: 1.5px solid var(--text);
+    border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  box-shadow: 2.5px 3px 0 var(--highlight);
+  outline: none;
+  transition: ease 0.25s;
+  color: var(--text);
+}
+
+.input:focus {
+  box-shadow: 5.5px 7px 0 var(--accent);
+}
+
+.button--submit {
+ max-width: 190px;
+  padding: 0.875rem;
+  font-size: 1rem;
+  border: 1.5px solid var(--text);
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  box-shadow: 2.5px 3px 0 var(--highlight);
+  outline: none;
+  transition: ease 0.25s;
+  transition: background-color .3s ease-in-out;
+}
+
+.button--submit:hover {
+  background-color: var(--highlight);
+}
+.button--submit:focus {
+  box-shadow: 5.5px 7px 0 black;
+}
+span{
+  display: flex;
+  color: var(--surface);
+  align-items: center;
+}
+/* .text{
+  font-size: 30px;
+  font-weight: 500;
+} */
+.mail .social{
+    text-align: center;
+    display: flex;
+    /* padding-bottom: 25px; */
+    /* color: black; */
+   }
+  .mail .social a{
+    text-decoration: none;
+    font-size: 24px;
+    color: inherit;
+    border: 1px solid var(--highlight);
+    width: 40px;
+    height: 40px;
+    /* line-height: 38px; */
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px;
+    opacity: 0.75;
+    transition: ease-out .2s;
+   }
+
+   .social a:hover{
+     background-color: var(--accent);
+     opacity: 0.9;
+    }
+    .mail .social i{
+     display: flex;
+     justify-content: center;
+     margin-top: 10px;
+    }
