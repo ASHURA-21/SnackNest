@@ -205,7 +205,7 @@ body{
     transform: translateX(-50%);
     height: 4px;
     width: 100px;
-    background-color: #2ecc71;
+    background-color: var(--accent);
     border-radius: 2px;
   }
   .project-container{
@@ -243,7 +243,7 @@ transform: translateY(-10px);
   width: 0;
   height: 4px;
   border-radius: 0 2px 2px 0;
-  background-color: #2ecc71;
+  background-color: var(--highlight);
   transition: .5s;
 }
     .project-title:after{
@@ -254,7 +254,7 @@ transform: translateY(-10px);
       width: 0;
       height: 4px;
       border-radius: 2px 0 0 2px;
-      background-color: #2ecc71;
+      background-color: var(--highlight);
       transition: .5s;
     }
   .pro-img{

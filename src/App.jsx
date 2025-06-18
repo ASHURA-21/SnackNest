@@ -10,8 +10,8 @@ import Shop from "./Pages/Shop"
 function App() {
   return (
     <>
-      <Ticker />
-
+<Ticker />
+<div style={{  paddingtop: '50px'}}>
       <nav className="navbar">
         <h2>
           <img src={nest} alt="Brand_logo" />
@@ -37,6 +37,7 @@ function App() {
           <Route path="/shop" element={<Shop />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
+        </div>
     </>
   );
 }

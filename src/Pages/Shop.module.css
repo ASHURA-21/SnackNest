@@ -1,0 +1,120 @@
+:root {
+  --bg: #fffaf2;
+  --surface: #ffffff;
+  --text: #333333;
+  --accent: #ffa751;
+  --highlight: #ffe259;
+}
+
+[data-theme='dark'] {
+  --bg: #1c1c1c;
+  --surface: #2a2a2a;
+  --text: #f5f5f5;
+  --accent: #ffa751;
+  --highlight: #ffe259;
+}
+
+
+.cards{
+    border-top-left-radius: 4rem;
+    border-top-right-radius: 4rem;
+    background: var(--bg);
+    height: 754vh;
+    margin-bottom: 30px;
+  }
+  .cards1 {
+  padding: 2rem;
+  text-align: center;
+}
+.cards1 h2, p{
+    color: var(--text);
+}
+.items {
+  display: flex;
+  /* justify-content: center; */
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.itemcard {
+  background-color: var(--surface);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  width: 250px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.itemcard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.itemcard img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.itemcard h3 {
+  margin: 0.5rem 0 0.3rem;
+  color: var(--text);
+}
+
+.itemcard span {
+  display: block;
+  font-size: 0.85rem;
+  color: gray;
+  margin-bottom: 0.5rem;
+}
+
+.itemcard p {
+  font-weight: bold;
+  color: var(--accent);
+}
+.link{
+  text-decoration: none;
+}
+.btn {
+ padding: 1.1em 2em;
+ background: none;
+ border: 2px solid #fff;
+ font-size: 15px;
+ color: #131313;
+ cursor: pointer;
+ position: relative;
+ overflow: hidden;
+ transition: all 0.3s;
+ border-radius: 12px;
+ background-color: #ecd448;
+ font-weight: bolder;
+ box-shadow: 0 2px 0 2px #000;
+}
+
+.btn:before {
+ content: "";
+ position: absolute;
+ width: 100px;
+ height: 120%;
+ background-color: #ff6700;
+ top: 50%;
+ transform: skewX(30deg) translate(-150%, -50%);
+ transition: all 0.5s;
+}
+
+.btn:hover {
+ background-color: #4cc9f0;
+ color: #fff;
+ box-shadow: 0 2px 0 2px #0d3b66;
+}
+
+.btn:hover::before {
+ transform: skewX(30deg) translate(150%, -50%);
+ transition-delay: 0.1s;
+}
+
+.btn:active {
+ transform: scale(0.9);
+}

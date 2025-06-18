@@ -26,7 +26,7 @@ body{
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem 1.5rem;
-  position: sticky;
+  /* position: sticky; */
   top: 0;
   z-index: 998;
   background: transparent;

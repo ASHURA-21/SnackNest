@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
 :root {
   --bg: #fffaf2;
   --surface: #ffffff;
@@ -24,7 +24,7 @@
 .footer-sec .info{
   display: flex;
   justify-content:space-around;
-  /* align-items: center; */
+  /* align-items: center;  */
 }
 
 .info .info-types{
@@ -85,17 +85,19 @@
   background-color: var(--highlight);
 }
 .button--submit:focus {
-  box-shadow: 5.5px 7px 0 black;
+  box-shadow: 5.5px 7px 0 var(--accent);
 }
 span{
   display: flex;
   color: var(--surface);
   align-items: center;
+  margin-bottom: 3px;
 }
-/* .text{
-  font-size: 30px;
+.text{
+  /* font-size: 30px; */
+  font-family: 'Fredoka';
   font-weight: 500;
-} */
+}
 .mail .social{
     text-align: center;
     display: flex;

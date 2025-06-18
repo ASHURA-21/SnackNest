@@ -4,6 +4,7 @@ import Shop from './Shop';
 import Recipes from './Recipes';
 import './Home.css'
 import Footer from './Footer';
+import TopBtn from './TopBtn';
 import Strawberry from '../assets/Strawberry.jpeg'
 import Mango from '../assets/Mangoes.jpeg'
 import Grapes from '../assets/Grapes.jpeg'
@@ -428,9 +429,10 @@ export default function Home() {
       <circle cx="5.73583" cy="17.3868" r="1.5" fill="black"></circle>
     </svg>
   </span>
-</button></Link>
+  </button></Link>
 </div>
 <Footer></Footer>
+<TopBtn></TopBtn>
     </>
   );
 }
