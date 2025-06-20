@@ -6,6 +6,7 @@ import About from "./Pages/About"
 import Contact from "./Pages/Contact"
 import Recipes from "./Pages/Recipes"
 import Shop from "./Pages/Shop"
+import TopBtn from "./Pages/TopBtn";
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
         </div>
+        <TopBtn></TopBtn>
     </>
   );
 }

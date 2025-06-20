@@ -59,6 +59,11 @@ body{
   color: var(--text);
 }
 
+.nav-links:active {
+  color: var(--text);
+  border-bottom: 2px solid var(--accent);
+}
+
 .buttons{
   display: flex;
   justify-content: center;

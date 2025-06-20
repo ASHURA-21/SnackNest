@@ -7,6 +7,7 @@ import Variety from '../assets/Variety.png'
 import Fast from '../assets/Fast.png'
 import Customer from '../assets/Customer.png'
 import Money from '../assets/Money.png'
+import TopBtn from './TopBtn'
 
 export default function About(){
     return(
@@ -84,7 +85,7 @@ Inspired by the idea of a “nest” — a cozy, trusted space — we built Snac
     </section>
         </div>
         <Footer></Footer>
-        
+        <TopBtn></TopBtn>
         </>
     )
 }

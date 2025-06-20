@@ -28,7 +28,7 @@ import Chip from '../assets/Chip.jpeg'
 import Sour from '../assets/Sour.jpeg'
 import Muffin from '../assets/Muffin.jpeg'
 import Cinnamon from '../assets/Cinnamon.jpeg'
-import Banana from '../assets/Banana.jpeg'
+import BananaBread from '../assets/BananaBread.jpeg'
 import Jollof1 from '../assets/Jollof1.jpeg'
 import BananaCake from '../assets/BananaCake.jpeg'
 import Chicken from '../assets/Chicken.jpeg'
@@ -170,7 +170,7 @@ export default function Home() {
     </div>
 
     <div className="item-card">
-      <img src={Banana} alt="Banana Bread" />
+      <img src={BananaBread} alt="Banana Bread" />
       <h3>Banana Bread</h3>
       <span>Homemade banana loaf with a hint of vanilla and walnut crunch.</span>
       <p>£4.50 per loaf</p>

@@ -2,6 +2,7 @@ import Jollof1 from '../assets/Jollof1.jpeg'
 import BananaCake from '../assets/BananaCake.jpeg'
 import Chicken from '../assets/Chicken.jpeg'
 import Styles from './Recipes.module.css'
+import TopBtn from './TopBtn';
 
 export default function Recipes(){
     return(
@@ -46,7 +47,7 @@ export default function Recipes(){
         </div>
     </div>  
 </div>
-    
+    <TopBtn></TopBtn>
 </>
 
 );
