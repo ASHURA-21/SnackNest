@@ -20,18 +20,22 @@
   margin-bottom: 30px;
   border-top-left-radius: 4rem;
   border-top-right-radius: 4rem;
+  
 }
 
   .cards1 {
   padding: 2rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .cards1 h2, p{
     color: var(--text);
 }
 .items {
   display: flex;
-  /* justify-content: center; */
+  justify-content: center;
   gap: 2rem;
   flex-wrap: wrap;
   margin-top: 1.5rem;

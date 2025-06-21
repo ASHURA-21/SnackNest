@@ -32,7 +32,6 @@ body{
   background: transparent;
   font-family: 'Roboto';
   font-weight: 500;
-  margin-top: 32px;
   height: 60px;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);

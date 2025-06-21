@@ -31,7 +31,14 @@ import Muffin from './Muffin.jpeg';
 import Cinnamon from './Cinnamon.jpeg';
 import BananaBread from './BananaBread.jpeg';
 import CupCake from './CupCake.jpeg';
-import Baguette from './Baguette.jpeg'
+import Baguette from './Baguette.jpeg';
+import MeatPie from './MeatPies.jpeg';
+import Puff from './Puff.jpeg'
+import Donuts from './Donuts.jpeg';
+import Pie from './Pie.jpeg';
+import Vanilla from './Vanilla.jpeg';
+import Cheese from './CheeseRoll.jpeg';
+import Garlic from './Garlic.jpeg'
 
 // Nigerian Foods
 import Jollof from './Jollof2.jpeg';
@@ -40,6 +47,15 @@ import Moi from './Moi.jpg';
 import Ofada from './Ofada.jpeg';
 import Suya from './Suya.jpeg';
 import Akara from './Akara.jpeg';
+import rice from './Fried-Rice.jpeg';
+import Efo from './Efo.jpeg'
+import Okra from './Okra.jpeg';
+import Asun from './Asun.jpeg';
+import Beans from './Beans.jpeg';
+import Boli from './Boli.jpg';
+import Nkwobi from './Nkwobi.jpg';
+import Soup from './Soup.jpeg';
+import Amala from './Amala.jpg';
 
 
 // Kitchen Utensils
@@ -85,6 +101,13 @@ export const ImageMap = {
   BananaBread,
   CupCake,
   Baguette,
+  MeatPie,
+  Puff,
+  Donuts,
+  Pie,
+  Vanilla,
+  Cheese,
+  Garlic,
 
   // Ng products
   Jollof,
@@ -93,6 +116,15 @@ export const ImageMap = {
   Ofada,
   Suya,
   Akara,
+  rice,
+  Efo,
+  Okra,
+  Asun,
+  Beans,
+  Boli,
+  Nkwobi,
+  Soup,
+  Amala,
 
 
   // Kitchen utensils

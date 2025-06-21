@@ -274,7 +274,7 @@ export default function Shop(){
     </div>
 
     <div className={Styles.itemcard}>
-      <img src={ImageMap.CupCake} alt="CupCake" />
+      <img src={ImageMap.MeatPie} alt="CupCake" />
       <h3>Meat Pies</h3>
       <span>Savory and satisfying — stuffed with spiced meats or veggies.</span>
       <p>£2.50 </p>
@@ -282,7 +282,7 @@ export default function Shop(){
     </div>
 
     <div className={Styles.itemcard}>
-      <img src={ImageMap.CupCake} alt="CupCake" />
+      <img src={ImageMap.Puff} alt="CupCake" />
       <h3>Puff Pastries</h3>
       <span>Light, layered dough — can be sweet or savory.</span>
       <p>£2.50</p>
@@ -290,7 +290,7 @@ export default function Shop(){
     </div>
 
     <div className={Styles.itemcard}>
-      <img src={ImageMap.CupCake} alt="CupCake" />
+      <img src={ImageMap.Donuts} alt="CupCake" />
       <h3>Donuts	Glazed, filled, or sprinkled</h3>
       <span>a sweet tooth’s dream.</span>
       <p>£5.50</p>
@@ -298,7 +298,7 @@ export default function Shop(){
     </div>
 
     <div className={Styles.itemcard}>
-      <img src={ImageMap.CupCake} alt="CupCake" />
+      <img src={ImageMap.Pie} alt="CupCake" />
       <h3>Apple Pie</h3>
       <span>A timeless classic — sweet apple filling with a golden crust.</span>
       <p>£9.50</p>
@@ -306,7 +306,7 @@ export default function Shop(){
     </div>
 
     <div className={Styles.itemcard}>
-      <img src={ImageMap.CupCake} alt="CupCake" />
+      <img src={ImageMap.Vanilla} alt="CupCake" />
       <h3> Vanilla Loaf Cake</h3>
       <span>Soft, lightly sweetened, perfect with tea or coffee.</span>
       <p>£7.50</p>
@@ -314,7 +314,7 @@ export default function Shop(){
     </div>
 
     <div className={Styles.itemcard}>
-      <img src={ImageMap.CupCake} alt="CupCake" />
+      <img src={ImageMap.Cheese} alt="CupCake" />
       <h3>Cheese Rolls</h3>
       <span>Savory and cheesy, soft with a golden top.</span>
       <p>£5.50 </p>
@@ -322,7 +322,7 @@ export default function Shop(){
     </div>
 
     <div className={Styles.itemcard}>
-      <img src={ImageMap.CupCake} alt="CupCake" />
+      <img src={ImageMap.Garlic} alt="CupCake" />
       <h3>Garlic Bread</h3>
       <span>Warm, buttery, and loaded with garlic flavor.</span>
       <p>£6.50</p>
@@ -385,6 +385,72 @@ export default function Shop(){
       <p> ₦500 for 5 pieces</p>
       <button className={Styles.btn}>Add to Cart</button>
     </div>
+
+    <div className={Styles.itemcard}>
+      <img src={ImageMap.rice} alt="Akara" />
+      <h3> Fried Rice with Plantain</h3>
+      <span>Flavorful rice stir-fried with vegetables and liver, paired with sweet, fried plantains.</span>
+      <p>₦800</p>
+      <button className={Styles.btn}>Add to Cart</button>
+    </div>
+
+     <div className={Styles.itemcard}>
+      <img src={ImageMap.Okra} alt="Akara" />
+      <h3>Okra Soup with Swallow</h3>
+      <span>Slimy and flavorful okra cooked with meat, fish, and served with a swallow like amala or eba.</span>
+      <p>₦600</p>
+      <button className={Styles.btn}>Add to Cart</button>
+    </div>
+
+     <div className={Styles.itemcard}>
+      <img src={ImageMap.Asun} alt="Akara" />
+      <h3>Asun (Spicy Goat Meat)</h3>
+      <span>Tender goat meat grilled and tossed in spicy pepper sauce.</span>
+      <p>₦900</p>
+      <button className={Styles.btn}>Add to Cart</button>
+    </div>
+
+     <div className={Styles.itemcard}>
+      <img src={ImageMap.Beans} alt="Akara" />
+      <h3>Beans & Plantain (Ewa Agoyin)</h3>
+      <span>Mashed beans with spicy stew, served with sweet fried plantains.</span>
+      <p>₦900</p>
+      <button className={Styles.btn}>Add to Cart</button>
+    </div>
+
+    <div className={Styles.itemcard}>
+      <img src={ImageMap.Boli} alt="Akara" />
+      <h3> Boli & Groundnut</h3>
+      <span>Roasted plantain served with groundnuts (peanuts) — perfect street food snack.</span>
+      <p>₦300</p>
+      <button className={Styles.btn}>Add to Cart</button>
+    </div>
+
+    <div className={Styles.itemcard}>
+      <img src={ImageMap.Nkwobi} alt="Akara" />
+      <h3>Nkwobi</h3>
+      <span>Cow foot delicacy cooked in spicy palm oil sauce.</span>
+      <p>₦100</p>
+      <button className={Styles.btn}>Add to Cart</button>
+    </div>
+
+    <div className={Styles.itemcard}>
+      <img src={ImageMap.Soup} alt="Akara" />
+      <h3>Pepper Soup</h3>
+      <span>Spicy, aromatic broth made with meat or fish and local herbs.</span>
+      <p>₦300</p>
+      <button className={Styles.btn}>Add to Cart</button>
+    </div>
+
+    <div className={Styles.itemcard}>
+      <img src={ImageMap.Amala} alt="Akara" />
+      <h3>Amala with Gbegiri & Ewedu</h3>
+      <span>A Southwestern trio: yam flour swallow with beans and jute leaf soups.</span>
+      <p>₦500</p>
+      <button className={Styles.btn}>Add to Cart</button>
+    </div>
+
+
   </div>
 </div>
 

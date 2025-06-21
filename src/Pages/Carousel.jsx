@@ -3,7 +3,7 @@ import './Pages.css'
 import Home from "./Home"
 import About from "./About"
 import Contact from "./Contact"
-import nest from "../assets/download.svg"
+// import nest from "../assets/download.svg"
 import Recipes from "./Recipes"
 import Shop from "./Shop"
 import Food from '../assets/Food.jpg'
@@ -46,7 +46,7 @@ useEffect(() => {
                     <p>
                         Check out our new recipes, smoothies, healthy, delicious meals and more
                     </p>
-                    <Link to="/Shop"><button className="btn">Shop now</button></Link>
+                    <Link to="/Recipes"><button className="btn">Shop now</button></Link>
                 </div>
             </div>
             <div className="item">

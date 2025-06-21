@@ -50,39 +50,91 @@
     line-height: 40px;
     font-family: 'Fredoka';
 }
-.input {
-  max-width: 190px;
-  padding: 0.875rem;
-  font-size: 1rem;
-  border: 1.5px solid var(--text);
-    border-top-left-radius: 1rem;
-  border-bottom-left-radius: 1rem;
-  box-shadow: 2.5px 3px 0 var(--highlight);
-  outline: none;
-  transition: ease 0.25s;
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  max-width: 500px;
+  width: 100%;
+  background-color: var(--accent);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.form h2{
   color: var(--text);
+  text-align: center;
 }
 
-.input:focus {
-  box-shadow: 5.5px 7px 0 var(--accent);
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
 }
 
-.button--submit {
- max-width: 190px;
-  padding: 0.875rem;
-  font-size: 1rem;
-  border: 1.5px solid var(--text);
-  border-top-right-radius: 1rem;
-  border-bottom-right-radius: 1rem;
-  box-shadow: 2.5px 3px 0 var(--highlight);
+.formGroup label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #444;
+}
+
+.formGroup input,
+.formGroup textarea {
+  padding: 10px 12px;
+  border: 2px solid #e0a96d;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  background-color: #fff;
+  transition: border-color 0.3s;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
   outline: none;
-  transition: ease 0.25s;
-  transition: background-color .3s ease-in-out;
+  border-color: #ffa751;
 }
 
-.button--submit:hover {
-  background-color: var(--highlight);
+/* Submit Button */
+.btn {
+ padding: 1.1em 2em;
+ background: none;
+ border: 2px solid #fff;
+ font-size: 15px;
+ color: #131313;
+ cursor: pointer;
+ position: relative;
+ overflow: hidden;
+ transition: all 0.3s;
+ border-radius: 12px;
+ background-color: #ecd448;
+ font-weight: bolder;
+ box-shadow: 0 2px 0 2px #000;
 }
-.button--submit:focus {
-  box-shadow: 5.5px 7px 0 var(--accent);
+
+.btn:before {
+ content: "";
+ position: absolute;
+ width: 100px;
+ height: 120%;
+ background-color: #ff6700;
+ top: 50%;
+ transform: skewX(30deg) translate(-150%, -50%);
+ transition: all 0.5s;
+}
+
+.btn:hover {
+ background-color: #4cc9f0;
+ color: #fff;
+ box-shadow: 0 2px 0 2px #0d3b66;
+}
+
+.btn:hover::before {
+ transform: skewX(30deg) translate(150%, -50%);
+ transition-delay: 0.1s;
+}
+
+.btn:active {
+ transform: scale(0.9);
 }
