@@ -21,6 +21,8 @@
     background: var(--surface);
     border-top-left-radius: 4rem;
     border-top-right-radius: 4rem;
+    margin-bottom: 10px;
+    height: 200vh;
 }
 
 .image {

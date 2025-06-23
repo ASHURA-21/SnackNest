@@ -5,33 +5,77 @@ import styled from 'styled-components';
 const SignupModal = ({ show, onClose, switchToLogin }) => {
   if (!show) return null;
 
+  // Handle form submit: save input data to a .txt file
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(e.target);
+    const name = formData.get('name');
+    const email = formData.get('email');
+    const password = formData.get('password');
+
+    const fileContent = `SIGN UP FORM DATA\n\nName: ${name}\nEmail: ${email}\nPassword: ${password}`;
+    const blob = new Blob([fileContent], { type: 'text/plain' });
+
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = 'signup_data.txt';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    alert('Form data saved as signup_data.txt');
+    onClose(); // Close the modal after download
+  };
+
   return (
     <Backdrop onClick={onClose}>
       <StyledWrapper onClick={(e) => e.stopPropagation()}>
         <div className="container">
           <div className="form_area">
             <p className="title">SIGN UP</p>
-            <form>
+            <form onSubmit={handleSubmit}>
               <div className="form_group">
                 <label className="sub_title" htmlFor="name">Name</label>
-                <input placeholder="Enter your full name" className="form_style" type="text" />
+                <input
+                  name="name"
+                  placeholder="Enter your full name"
+                  className="form_style"
+                  type="text"
+                  required
+                />
               </div>
               <div className="form_group">
                 <label className="sub_title" htmlFor="email">Email</label>
-                <input placeholder="Enter your email" id="email" className="form_style" type="email" />
+                <input
+                  name="email"
+                  placeholder="Enter your email"
+                  className="form_style"
+                  type="email"
+                  required
+                />
               </div>
               <div className="form_group">
                 <label className="sub_title" htmlFor="password">Password</label>
-                <input placeholder="Enter your password" id="password" className="form_style" type="password" />
+                <input
+                  name="password"
+                  placeholder="Enter your password"
+                  className="form_style"
+                  type="password"
+                  required
+                />
               </div>
               <div>
                 <button className="btn" type="submit">SIGN UP</button>
                 <p>
                   Have an Account?{" "}
-                  <span className="link" onClick={() => {
-                    onClose();
-                    switchToLogin();
-                  }}>
+                  <span
+                    className="link"
+                    onClick={() => {
+                      onClose();
+                      switchToLogin();
+                    }}
+                  >
                     Login here!
                   </span>
                 </p>
@@ -45,6 +89,7 @@ const SignupModal = ({ show, onClose, switchToLogin }) => {
 };
 
 export default SignupModal;
+
 
 const Backdrop = styled.div`
   position: fixed;

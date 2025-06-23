@@ -8,6 +8,7 @@ import Contact from "./Pages/Contact";
 import Recipes from "./Pages/Recipes";
 import Shop from "./Pages/Shop";
 import TopBtn from "./Pages/TopBtn";
+import Search from "./Pages/Search";
 
 import SignupModal from "./SignupModal";
 import LoginModal from "./LoginModal";
@@ -34,6 +35,7 @@ function App() {
             <li className="nav-links"><Link to="/contact">Contact us</Link></li>
           </ul>
 
+<Search/>
           <div className="buttons">
             <button className="button" onClick={() => setShowLogin(true)}>Login</button>
             <button className="button" onClick={() => setShowSignup(true)}>Sign Up</button>
@@ -50,7 +52,6 @@ function App() {
       </div>
 
       <TopBtn />
-
       {/* Modals */}
       <LoginModal
         show={showLogin}

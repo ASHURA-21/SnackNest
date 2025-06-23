@@ -5,29 +5,65 @@ import styled from 'styled-components';
 const LoginModal = ({ show, onClose, switchToSignup }) => {
   if (!show) return null;
 
+  const handleLogin = (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(e.target);
+    const email = formData.get('email');
+    const password = formData.get('password');
+
+    const fileContent = `LOGIN FORM DATA\n\nEmail: ${email}\nPassword: ${password}`;
+    const blob = new Blob([fileContent], { type: 'text/plain' });
+
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = 'login_data.txt';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    alert(`Welcome back, ${email.split('@')[0]}!`);
+    onClose();
+  };
+
   return (
     <Backdrop onClick={onClose}>
       <StyledWrapper onClick={(e) => e.stopPropagation()}>
         <div className="container">
           <div className="form_area">
-            <p className="title">LOG IN</p>
-            <form>
+            <p className="title">LOGIN</p>
+            <form onSubmit={handleLogin}>
               <div className="form_group">
                 <label className="sub_title" htmlFor="email">Email</label>
-                <input placeholder="Enter your email" id="email" className="form_style" type="email" />
+                <input
+                  name="email"
+                  placeholder="Enter your email"
+                  className="form_style"
+                  type="email"
+                  required
+                />
               </div>
               <div className="form_group">
                 <label className="sub_title" htmlFor="password">Password</label>
-                <input placeholder="Enter your password" id="password" className="form_style" type="password" />
+                <input
+                  name="password"
+                  placeholder="Enter your password"
+                  className="form_style"
+                  type="password"
+                  required
+                />
               </div>
               <div>
-                <button className="btn" type="submit">LOG IN</button>
+                <button className="btn" type="submit">LOGIN</button>
                 <p>
-                  Don't have an account?{" "}
-                  <span className="link" onClick={() => {
-                    onClose();
-                    switchToSignup();
-                  }}>
+                  Don't have an account?{' '}
+                  <span
+                    className="link"
+                    onClick={() => {
+                      onClose();
+                      switchToSignup();
+                    }}
+                  >
                     Sign up here!
                   </span>
                 </p>
@@ -41,6 +77,7 @@ const LoginModal = ({ show, onClose, switchToSignup }) => {
 };
 
 export default LoginModal;
+
 
 const Backdrop = styled.div`
   position: fixed;

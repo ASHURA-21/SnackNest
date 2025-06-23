@@ -54,7 +54,7 @@ body{
     background-color: var(--accent);
     border-radius: 2px;
   }
-  .project-container{
+  .projectcontainer{
     display: grid;
     grid-template-columns: repeat(3, 0.2fr);
     justify-content: center;
@@ -62,18 +62,20 @@ body{
     text-align: center;
     padding: 1rem 80px;
     font-size: 1.2rem;
+    margin-bottom: 20px;
   }
-  .project-box{
+  .projectbox{
     color: var(--text);
     cursor: pointer;
+    margin-bottom: 20px;
   }
-  .project-box:hover > .project-title:after,  .project-box:hover > .project-title:before{
+  .projectbox:hover > .projecttitle:after,  .projectbox:hover > .projecttitle:before{
     width: 35px;
   }  
-  .project-box:hover .pro-img{
+  .projectbox:hover .proimg{
 transform: translateY(-10px);
   }
-  .project-title{
+  .projecttitle{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -81,7 +83,7 @@ transform: translateY(-10px);
     margin-bottom: 0.5rem;
     position: relative;
   }
-  .project-title:before{
+  .projecttitle:before{
   content: '';
   position: absolute;
   bottom: 0;
@@ -92,7 +94,7 @@ transform: translateY(-10px);
   background-color: var(--highlight);
   transition: .5s;
 }
-    .project-title:after{
+    .projecttitle:after{
       content: '';
       position: absolute;
       bottom: 0;
@@ -103,7 +105,7 @@ transform: translateY(-10px);
       background-color: var(--highlight);
       transition: .5s;
     }
-  .pro-img{
+  .proimg{
     width: 490px;
     height: 270px;
     position: relative;
@@ -113,7 +115,7 @@ transform: translateY(-10px);
     justify-content: center;
     transition: .5s;
   }
-  .pro-img:after{
+  .proimg:after{
     content: '';
     position: absolute;
     top: 0;
@@ -123,23 +125,23 @@ transform: translateY(-10px);
     /* background: rgba(100, 100, 100, 0.5); */
   }
 
-  .project-title h3{
+  .projecttitle h3{
     color: var(--text);
     margin: 0.5rem;
   }
-  .pro-icon{
+  .proicon{
     width: 500px;
     border-radius: 1rem;
   }
 
 @media screen and (max-width:990px){
- .project-container{
+ .projectcontainer{
   grid-template-columns: repeat((2, 1fr));
   padding: 2rem 50px;
  }
 }
 @media screen and (max-width:650px){
- .project-container{
+ .projectcontainer{
   grid-template-columns: repeat((1fr));
   padding: 2rem 50px;
  }

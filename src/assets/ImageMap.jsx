@@ -66,6 +66,16 @@ import Weigh from './Weigh.jpeg';
 import Whisk from './Whisk.jpeg';
 import Grate from './Grate.jpeg';
 
+// Recipes
+import Pasta from './Pasta.jpeg';
+import Fried from './Fried.jpeg';
+import Beef from './Beef.jpeg';
+import EgusiSoup from './EgusiSoup.jpeg';
+import Yam from './Yams.jpeg';
+import riro from './Riro.jpeg';
+import Salad from './Salad.jpeg'
+import Bowl from './Bowl.jpeg';
+
 export const ImageMap = {
   // Fruits 
   Strawberry,
@@ -134,4 +144,15 @@ export const ImageMap = {
   Weigh,
   Whisk,
   Grate,
+
+
+  // Recipes
+  Pasta,
+  Fried,
+  Beef,
+  EgusiSoup,
+  Yam,
+  riro,
+  Salad,
+  Bowl,
 };
