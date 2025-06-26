@@ -9,6 +9,7 @@ import Recipes from "./Pages/Recipes";
 import Shop from "./Pages/Shop";
 import TopBtn from "./Pages/TopBtn";
 import Search from "./Pages/Search";
+import CartIcon from "./Pages/CartIcon";
 
 import SignupModal from "./SignupModal";
 import LoginModal from "./LoginModal";
@@ -20,7 +21,6 @@ function App() {
   return (
     <>
       <Ticker />
-
       <div style={{ paddingTop: "50px" }}>
         <nav className="navbar">
           <h2>
@@ -42,6 +42,7 @@ function App() {
           </div>
         </nav>
 
+      <CartIcon/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

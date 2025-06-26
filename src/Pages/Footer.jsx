@@ -42,7 +42,7 @@ return(
 </span>
           <label htmlFor="mail" className="mail-info">Sign up for our newsletter to be informed on the latest discounts, new arrivals and more</label>
           <span><h2>Socials</h2></span>
-<div class="social">
+<div className="social">
             <a href="https://x.com/ASHURA425565192" target="_blank"><i className="fa-brands fa-facebook"></i></a>
             <a href="https://www.instagram.com/weirdintrovertkid/" target="_blank"><i className="fa-brands fa-instagram"></i></a>
             <a href="https://github.com/ASHURA-21" target="_blank"><i className="fa-brands fa-tiktok"></i></a>

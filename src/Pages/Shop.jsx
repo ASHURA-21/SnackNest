@@ -2,9 +2,10 @@ import Styles from './Shop.module.css';
 import { ImageMap } from '../assets/ImageMap';
 import Footer from './Footer';
 import TopBtn from './TopBtn';
-
+import { useCart } from './CartContext';
 
 export default function Shop() {
+  const { addToCart } = useCart();
 
   const products = {
     'Fruits & Vegetables': [
@@ -91,7 +92,10 @@ export default function Shop() {
                     style: 'currency',
                     currency: item.price > 1000 ? 'NGN' : 'GBP'
                   })}</p>
-                  <button className={Styles.btn}>
+                  <button
+                    className={Styles.btn}
+                    onClick={() => addToCart(item)}
+                  >
                     Add to Cart
                   </button>
                 </div>
