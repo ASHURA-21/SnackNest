@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
   --bg: #fffaf2;
   --surface: #ffffff;
@@ -14,47 +15,48 @@
   --accent: #ffa751;
   --highlight: #ffe259;
 }
-body{
+
+body {
   background: linear-gradient(to right, var(--highlight), var(--highlight));
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
-.navbar{
+/* Navbar */
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem 1.5rem;
-  /* position: sticky; */
-  top: 0;
-  z-index: 998;
-  background: transparent;
-  font-family: 'Roboto';
-  font-weight: 500;
   height: 60px;
+  z-index: 998;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
 }
 
-.nav-list{
+.nav-list {
   display: flex;
   justify-content: space-between;
   gap: 30px;
 }
-.nav-list .nav-links{
+
+.nav-links {
   list-style: none;
 }
-.nav-list .nav-links a{
+
+.nav-links a {
   text-decoration: none;
   color: var(--accent);
-  font-size:30px;
-  transition: ease-in .1s;
+  font-size: 30px;
+  transition: ease-in 0.1s;
 }
 
-.nav-list .nav-links a:hover{
+.nav-links a:hover {
   color: var(--text);
 }
 
@@ -63,28 +65,76 @@ body{
   border-bottom: 2px solid var(--accent);
 }
 
-.buttons{
+/* Buttons */
+.buttons {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 30px;
 }
 
-.button{
+.button {
   height: 30px;
   background-color: transparent;
-  color: white;
+  color: var(--text);
   font-weight: 400;
   font-size: 20px;
-  border: none;
   border: 2px solid var(--accent);
   border-radius: 5px;
-  transition: ease-in-out .1s;
-  color: var(--text);
+  transition: ease-in-out 0.1s;
 }
 
-.button:hover{
+.button:hover {
   background-color: var(--accent);
 }
 
+/* Hamburger Menu Toggle */
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  color: var(--accent);
+  cursor: pointer;
+  background: none;
+  border: none;
+  z-index: 1001;
+}
 
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none !important;
+  }
+
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 1.5rem;
+    top: 1rem;
+  }
+
+  .nav-list.mobile-active,
+  .buttons.mobile-active,
+  .search-wrapper.mobile-active {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--surface);
+    padding: 1rem 1.5rem;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .nav-list.mobile-active .nav-links a {
+    font-size: 20px;
+    color: var(--text);
+  }
+
+  .buttons.mobile-active {
+    align-items: flex-start;
+  }
+}

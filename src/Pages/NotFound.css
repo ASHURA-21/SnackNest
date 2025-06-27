@@ -1,0 +1,26 @@
+.not-found {
+  text-align: center;
+  margin-top: 100px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.not-found h1 {
+  font-size: 120px;
+  color: var(--accent);
+}
+
+.not-found p {
+  font-size: 24px;
+  color: var(--text);
+}
+
+.back-home {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: var(--accent);
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}

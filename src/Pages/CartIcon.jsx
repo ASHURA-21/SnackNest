@@ -1,4 +1,5 @@
 import { useCart } from './CartContext';
+import { Link } from 'react-router-dom';
 import './CartIcon.css';
 
 export default function CartIcon() {
@@ -11,7 +12,7 @@ export default function CartIcon() {
 
   return (
     <div className="cart-icon-wrapper">
-      {/* <FaShoppingCart className="cart-icon" /> */}
+     <Link to='/Checkout'>
       <button data-quantity={totalItems} className="btn-cart">
           <svg className="icon-cart" viewBox="0 0 24.38 30.52" height="30.52" width="24.38" xmlns="http://www.w3.org/2000/svg">
             <title>icon-cart</title>
@@ -19,6 +20,7 @@ export default function CartIcon() {
           </svg>
           <span className="quantity">{totalItems}</span>
         </button>
+        </Link>
     </div>
   );
 }
