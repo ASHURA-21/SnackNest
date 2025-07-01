@@ -75,6 +75,7 @@ import Yam from './Yams.jpeg';
 import riro from './Riro.jpeg';
 import Salad from './Salad.jpeg'
 import Bowl from './Bowl.jpeg';
+import Stir from './Stir.jpeg';
 
 export const ImageMap = {
   // Fruits 
@@ -155,4 +156,5 @@ export const ImageMap = {
   riro,
   Salad,
   Bowl,
+  Stir
 };

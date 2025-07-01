@@ -1,26 +1,32 @@
 import { Routes, Route, Link } from "react-router-dom";
 import { useState } from "react";
+import { useLocation } from "react-router-dom";
+import { lazy, Suspense,} from "react";
 import Ticker from "./Pages/Ticker";
 import nest from "./assets/download.svg";
-import Home from "./Pages/Home";
-import About from "./Pages/About";
-import Contact from "./Pages/Contact";
-import Recipes from "./Pages/Recipes";
-import Shop from "./Pages/Shop";
+import Loader from "./Pages/Loader";
+const Home = lazy(() => import("./Pages/Home"));
+const About = lazy(() => import("./Pages/About"));
+const Contact = lazy(() => import("./Pages/Contact"));
+const Recipes = lazy(() => import("./Pages/Recipes"));
+const Shop = lazy(() => import("./Pages/Shop"));
+const Checkout = lazy(() => import("./Pages/Checkout"));
+const NotFound = lazy(() => import("./Pages/NotFound"));
+
+
+import CartIcon from "./Pages/CartIcon";
 import TopBtn from "./Pages/TopBtn";
 import Search from "./Pages/Search";
-import CartIcon from "./Pages/CartIcon";
-import Checkout from "./Pages/Checkout";
-import NotFound from "./Pages/NotFound";
-
 import SignupModal from "./SignupModal";
 import LoginModal from "./LoginModal";
-import { FaBars, FaTimes } from "react-icons/fa"; // For menu icon
+import { FaBars, FaTimes } from "react-icons/fa";
 
 function App() {
   const [showSignup, setShowSignup] = useState(false);
   const [showLogin, setShowLogin] = useState(false);
-  const [isMobileOpen, setIsMobileOpen] = useState(false); // For mobile nav toggle
+  const [isMobileOpen, setIsMobileOpen] = useState(false);
+  const location = useLocation();
+
 
   return (
     <>
@@ -60,36 +66,33 @@ function App() {
 {isMobileOpen && (
   <>
     <ul className="nav-list mobile-active">
+      <Search />
       <li className="nav-links"><Link to="/" onClick={() => setIsMobileOpen(false)}>Home</Link></li>
       <li className="nav-links"><Link to="/about" onClick={() => setIsMobileOpen(false)}>About Us</Link></li>
       <li className="nav-links"><Link to="/Recipes" onClick={() => setIsMobileOpen(false)}>Recipes</Link></li>
       <li className="nav-links"><Link to="/shop" onClick={() => setIsMobileOpen(false)}>Shop now</Link></li>
       <li className="nav-links"><Link to="/contact" onClick={() => setIsMobileOpen(false)}>Contact us</Link></li>
-    </ul>
-
-    <div className="search-wrapper mobile-active">
-      <Search />
-    </div>
-
-    <div className="buttons mobile-active">
       <button className="button" onClick={() => { setShowLogin(true); setIsMobileOpen(false); }}>Login</button>
       <button className="button" onClick={() => { setShowSignup(true); setIsMobileOpen(false); }}>Sign Up</button>
-    </div>
-  </>
+    </ul>
+ </>
 )}
 
 
-        <CartIcon />
+{location.pathname !== "/Checkout" && <CartIcon />}
 
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/Recipes" element={<Recipes />} />
-          <Route path="/shop" element={<Shop />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/Checkout" element={<Checkout />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+<Suspense fallback={<Loader />}>
+  <Routes>
+    <Route path="/" element={<Home />} />
+    <Route path="/about" element={<About />} />
+    <Route path="/Recipes" element={<Recipes />} />
+    <Route path="/shop" element={<Shop />} />
+    <Route path="/contact" element={<Contact />} />
+    <Route path="/Checkout" element={<Checkout />} />
+    <Route path="*" element={<NotFound />} />
+  </Routes>
+</Suspense>
+
       </div>
 
       <TopBtn />

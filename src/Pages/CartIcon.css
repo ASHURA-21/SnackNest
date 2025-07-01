@@ -90,3 +90,12 @@
   display: none;
 }
 
+@media (max-width:480px){
+  .cart-icon-wrapper{
+      position: fixed;
+      top: 60px;
+      bottom: 50px;
+      right: 10px;
+      z-index: 1000;
+  }
+}

@@ -37,8 +37,8 @@ return(
         <div className="mail">
 
           <span><p className="text">Email:</p>
-<input type="email" name="text" class="input" placeholder="Email address" />    
-<input class="button--submit" value="Subscribe" type="submit"/>
+<input type="email" name="text" className="input" placeholder="Email address" />    
+<input className="button--submit" value="Subscribe" type="submit"/>
 </span>
           <label htmlFor="mail" className="mail-info">Sign up for our newsletter to be informed on the latest discounts, new arrivals and more</label>
           <span><h2>Socials</h2></span>

@@ -120,7 +120,6 @@ span{
   margin-bottom: 3px;
 }
 .text{
-  /* font-size: 30px; */
   font-family: 'Fredoka';
   font-weight: 500;
 }
@@ -163,5 +162,8 @@ span{
         justify-content: center;
         align-items: center;
         text-align: center;
+      }
+      span{
+        padding-right: 40px;
       }
     }

@@ -65,7 +65,6 @@
  .servicescontainer {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Centers the boxes horizontally */
   gap: 2rem;
   width: 100%;
   max-width: 1200px;
@@ -74,7 +73,7 @@
 }
 
 .servicebox {
-  flex: 1 1 300px; /* Flex grow/shrink with a minimum of 300px */
+  flex: 1 1 300px;
   max-width: 350px;
   height: 350px;
   display: flex;
@@ -95,7 +94,6 @@
 }
 
 .servicebox:hover {
-  /* background-color: var(--highlight); */
   border-color: var(--accent);
   transform: scale(1.03);
 }
@@ -107,4 +105,14 @@
 .serviceinfo img {
   font-size: 50px;
   margin-bottom: 1rem;
+}
+
+@media (max-width: 768px){
+  .container1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+    padding: auto;
+  }
 }

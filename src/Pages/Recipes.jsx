@@ -88,7 +88,7 @@ export default function Recipes(){
                      <div className={Styles.projectbox}>
                 <div className={Styles.projecttitle}>
                     <div className={Styles.proimg}>
-                        <img src={ImageMap.Fried} alt="BananaCake" className={Styles.proicon}/>
+                        <img src={ImageMap.Stir} alt="BananaCake" className={Styles.proicon}/>
                     </div>
                     <h3>Beef Stir Fry</h3>
                 </div>

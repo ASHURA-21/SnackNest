@@ -135,9 +135,19 @@ transform: translateY(-10px);
   }
 
 @media screen and (max-width:990px){
+  .recipes{
+    width: auto;
+    padding: auto;
+  }
  .projectcontainer{
   grid-template-columns: repeat((2, 1fr));
   padding: 2rem 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  text-align: center;
  }
 }
 @media screen and (max-width:650px){
@@ -187,4 +197,8 @@ transform: translateY(-10px);
 
 .btn:active {
  transform: scale(0.9);
+}
+
+@media (max-width: 768px){
+  
 }

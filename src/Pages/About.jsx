@@ -85,7 +85,7 @@ Inspired by the idea of a “nest” — a cozy, trusted space — we built Snac
     </section>
         </div>
         <Footer></Footer>
-        <TopBtn></TopBtn>
+        {/* <TopBtn></TopBtn> */}
         </>
     )
 }

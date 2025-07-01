@@ -14,7 +14,9 @@
   --highlight: #ffe259;
 }
 
-
+body{
+  background: linear-gradient(to right, var(--highlight), var(--accent));
+}
 .cards {
   background: var(--bg);
   margin-bottom: 30px;

@@ -13,6 +13,9 @@
   --accent: #ffa751;
   --highlight: #ffe259;
 }
+body{
+      background: linear-gradient(to right, var(--highlight), var(--accent));
+}
 .container1 {
     display: flex;
     justify-content: center;
