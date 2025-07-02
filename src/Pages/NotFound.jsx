@@ -1,9 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './NotFound.css'; // Optional for styling
+import './NotFound.css';
+import {Suspense,} from "react";
+import Loader from "./Pages/Loader";
 
 const NotFound = () => {
   return (
+<Suspense fallback={<Loader />}>
     <div className="not-found">
       <h1>404</h1>
       <p>Oops!
@@ -12,6 +15,7 @@ const NotFound = () => {
       </p>
       <Link to="/" className="back-home">Go back to Home</Link>
     </div>
+    </Suspense>
   );
 };
 

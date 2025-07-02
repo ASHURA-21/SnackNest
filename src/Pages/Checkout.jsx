@@ -19,7 +19,7 @@ const total = subtotal - discount + shipping;
 
   return (
     <> 
- <Link to='./home' className='home'>
+ <Link to='/' className='home'>
     <a href="#">Go home</a>
     </Link>
       <div className="master-container">
@@ -70,6 +70,8 @@ const total = subtotal - discount + shipping;
   <span>Shipping fees:</span>
   <span>${shipping.toFixed(2)}</span>
           </div>
+
+          
           <div className="checkout--footer">
              <label className="price"><sup>$</sup>{total.toFixed(2)}</label>
              {/* <button className="checkout-btn">Checkout</button> */}

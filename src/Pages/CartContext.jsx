@@ -11,22 +11,33 @@ export const CartProvider = ({ children }) => {
     setCart(prevCart => {
       const itemExists = prevCart.find(item => item.name === product.name);
       if (itemExists) {
-        // Increase quantity
         return prevCart.map(item =>
           item.name === product.name
             ? { ...item, quantity: item.quantity + 1 }
             : item
         );
       } else {
-        // Add with quantity 1
         return [...prevCart, { ...product, quantity: 1 }];
       }
     });
   };
 
+  const removeFromCart = (product) => {
+    setCart(prevCart =>
+      prevCart
+        .map(item =>
+          item.name === product.name
+            ? { ...item, quantity: item.quantity - 1 }
+            : item
+        )
+        .filter(item => item.quantity > 0)
+    );
+  };
+
   return (
-    <CartContext.Provider value={{ cart, addToCart }}>
+    <CartContext.Provider value={{ cart, addToCart, removeFromCart }}>
       {children}
     </CartContext.Provider>
   );
 };
+
