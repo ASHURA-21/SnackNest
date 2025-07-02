@@ -33,7 +33,7 @@ body{
     border-top-left-radius: 4rem;
     border-top-right-radius: 4rem;
     background: var(--bg);
-    height: 754vh;
+    /* height: 754vh; */
     margin-bottom: 30px;
   }
   .cards1 {
