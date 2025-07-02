@@ -48,6 +48,16 @@ export default function Contact() {
 
              <button className={Styles.btn}>Submit</button>
         </form>
+
+                <div className={Styles.header}>
+          <h1>Other Ways you can Reach us.</h1>
+<ul>
+  <li>📧 Email: support@yourwebsite.com</li>
+  <li>📞 Phone: +234 xxx xxx xxxx</li>
+  <li>📍 Address (if you have one)</li>
+  <li>⏰ Business hours** (e.g., Mon–Fri: 9AM – 5PM)</li>
+</ul>
+        </div>
       </div>
 
       <TopBtn />

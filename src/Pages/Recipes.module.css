@@ -134,28 +134,6 @@ transform: translateY(-10px);
     border-radius: 1rem;
   }
 
-@media screen and (max-width:990px){
-  .recipes{
-    width: auto;
-    padding: auto;
-  }
- .projectcontainer{
-  grid-template-columns: repeat((2, 1fr));
-  padding: 2rem 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 250px;
-  text-align: center;
- }
-}
-@media screen and (max-width:650px){
- .projectcontainer{
-  grid-template-columns: repeat((1fr));
-  padding: 2rem 50px;
- }
-}
 
 .btn {
  padding: 1.1em 2em;
@@ -199,6 +177,67 @@ transform: translateY(-10px);
  transform: scale(0.9);
 }
 
-@media (max-width: 768px){
-  
+/* Large devices (desktops, 990px and down) */
+@media screen and (max-width: 990px) {
+  .projectcontainer {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1rem 40px;
+    gap: 2rem;
+  }
+
+  .proimg {
+    width: 100%;
+    height: auto;
+  }
+
+  .proicon {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Medium devices (tablets, 768px and down) */
+@media screen and (max-width: 768px) {
+  .projectcontainer {
+    grid-template-columns: 1fr;
+    padding: 1rem 20px;
+    gap: 1.5rem;
+  }
+
+  .proimg {
+    width: 100%;
+    height: auto;
+  }
+
+  .proicon {
+    width: 100%;
+    height: auto;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 0.9em 1.5em;
+  }
+}
+
+/* Small devices (phones, 480px and down) */
+@media screen and (max-width: 480px) {
+  .header h1,
+  .inner h2,
+  .projecttitle h3 {
+    font-size: 1.2rem;
+  }
+
+  .btn {
+    padding: 0.8em 1.2em;
+    font-size: 13px;
+  }
+
+  .proimg {
+    border-radius: 25px;
+  }
+
+  .proicon {
+    border-radius: 1rem;
+  }
 }
