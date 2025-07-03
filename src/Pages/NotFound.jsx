@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './NotFound.css';
 import {Suspense,} from "react";
-import Loader from "./Pages/Loader";
+import Loader from "./Loader";
 
 const NotFound = () => {
   return (

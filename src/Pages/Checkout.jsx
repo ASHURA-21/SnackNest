@@ -5,6 +5,7 @@ import './Checkout.css'
 import { useCart } from './CartContext';
 import { Link } from 'react-router-dom';
 import Home from './Home';
+import Card from './Card';
 
 
 const Checkout = () => {
@@ -72,11 +73,13 @@ const total = subtotal - discount + shipping;
           </div>
 
           
+       <Link to='/Card'>
           <div className="checkout--footer">
              <label className="price"><sup>$</sup>{total.toFixed(2)}</label>
              {/* <button className="checkout-btn">Checkout</button> */}
                    <button className="btn">Checkout</button>
           </div>
+          </Link>
         </div>
       </div>
     </>

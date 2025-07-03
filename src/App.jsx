@@ -5,6 +5,7 @@ import { lazy, Suspense,} from "react";
 import Ticker from "./Pages/Ticker";
 import nest from "./assets/download.svg";
 import Loader from "./Pages/Loader";
+import ThemeToggle from "./Pages/ThemeToggle";
 const Home = lazy(() => import("./Pages/Home"));
 const About = lazy(() => import("./Pages/About"));
 const Contact = lazy(() => import("./Pages/Contact"));
@@ -12,6 +13,7 @@ const Recipes = lazy(() => import("./Pages/Recipes"));
 const Shop = lazy(() => import("./Pages/Shop"));
 const Checkout = lazy(() => import("./Pages/Checkout"));
 const NotFound = lazy(() => import("./Pages/NotFound"));
+const Card = lazy(() => import("./Pages/Card"));
 
 
 import CartIcon from "./Pages/CartIcon";
@@ -32,6 +34,7 @@ function App() {
     <>
       <Ticker />
       <div style={{ paddingTop: "50px" }}>
+
      <nav className="navbar">
   <h2>
     <img src={nest} alt="Brand_logo" />
@@ -52,6 +55,7 @@ function App() {
   </div>
 
   <div className="buttons desktop-only">
+        <ThemeToggle /> 
     <button className="button" onClick={() => setShowLogin(true)}>Login</button>
     <button className="button" onClick={() => setShowSignup(true)}>Sign Up</button>
   </div>
@@ -72,6 +76,7 @@ function App() {
       <li className="nav-links"><Link to="/Recipes" onClick={() => setIsMobileOpen(false)}>Recipes</Link></li>
       <li className="nav-links"><Link to="/shop" onClick={() => setIsMobileOpen(false)}>Shop now</Link></li>
       <li className="nav-links"><Link to="/contact" onClick={() => setIsMobileOpen(false)}>Contact us</Link></li>
+       <ThemeToggle /> 
       <button className="button" onClick={() => { setShowLogin(true); setIsMobileOpen(false); }}>Login</button>
       <button className="button" onClick={() => { setShowSignup(true); setIsMobileOpen(false); }}>Sign Up</button>
     </ul>
@@ -80,7 +85,6 @@ function App() {
 
 
 {location.pathname !== "/Checkout" && <CartIcon />}
-
 <Suspense fallback={<Loader />}>
   <Routes>
     <Route path="/" element={<Home />} />
@@ -89,6 +93,7 @@ function App() {
     <Route path="/shop" element={<Shop />} />
     <Route path="/contact" element={<Contact />} />
     <Route path="/Checkout" element={<Checkout />} />
+    <Route path="/Card" element={<Card />} />
     <Route path="*" element={<NotFound />} />
   </Routes>
 </Suspense>
