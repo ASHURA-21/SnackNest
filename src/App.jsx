@@ -37,7 +37,7 @@ function App() {
 
      <nav className="navbar">
   <h2>
-    <img src={nest} alt="Brand_logo" />
+    <img src={nest} alt="Brand_logo" loading={Loader}/>
   </h2>
 
   {/* Desktop Nav */}
