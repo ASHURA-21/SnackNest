@@ -1,5 +1,6 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
 import './Card.css'
+import Done from './Done';
 
 const Card = () => {
   return (
@@ -21,7 +22,9 @@ const Card = () => {
                 <input placeholder="CVV" title="CVV" name="cvv" type="number" className="input_field" id="password_field" />
               </div>
             </div>
-            <button className="purchase--btn">Done</button>
+            <Link to="/done"className='done'>
+              <button className="purchase--btn">Done</button>
+              </Link>
             <div className="separator">
               <hr className="line" />
               <p>or pay using e-wallet</p>

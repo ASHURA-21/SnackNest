@@ -14,6 +14,7 @@ const Shop = lazy(() => import("./Pages/Shop"));
 const Checkout = lazy(() => import("./Pages/Checkout"));
 const NotFound = lazy(() => import("./Pages/NotFound"));
 const Card = lazy(() => import("./Pages/Card"));
+const Done = lazy(() => import("./Pages/Done"));
 
 
 import CartIcon from "./Pages/CartIcon";
@@ -37,7 +38,7 @@ function App() {
 
      <nav className="navbar">
   <h2>
-    <img src={nest} alt="Brand_logo" loading={Loader}/>
+    <img src={nest} alt="Brand_logo"/>
   </h2>
 
   {/* Desktop Nav */}
@@ -84,7 +85,7 @@ function App() {
 )}
 
 
-{location.pathname !== "/Checkout" && <CartIcon />}
+{location.pathname !== "/Checkout" && location.pathname !== "/Card" && <CartIcon />}
 <Suspense fallback={<Loader />}>
   <Routes>
     <Route path="/" element={<Home />} />
@@ -94,6 +95,7 @@ function App() {
     <Route path="/contact" element={<Contact />} />
     <Route path="/Checkout" element={<Checkout />} />
     <Route path="/Card" element={<Card />} />
+    <Route path="/Card" element={<Done />} />
     <Route path="*" element={<NotFound />} />
   </Routes>
 </Suspense>

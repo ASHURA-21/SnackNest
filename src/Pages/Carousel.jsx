@@ -46,7 +46,7 @@ useEffect(() => {
                     <p>
                         Check out our new recipes, smoothies, healthy, delicious meals and more
                     </p>
-                    <Link to="/Recipes"><button className="btn">Shop now</button></Link>
+                    <Link to="/Recipes"><button className="btn">Check them out</button></Link>
                 </div>
             </div>
             <div className="item">
@@ -57,7 +57,7 @@ useEffect(() => {
                     <p>
                         Check out our new Jollof rice and asun recipe 
                     </p>
-                       <Link to="/Shop"><button className="btn">Shop now</button></Link>
+                       <Link to="/Shop"><button className="btn">Read Now</button></Link>
                 </div>
             </div>
             <div className="item">
@@ -78,9 +78,9 @@ useEffect(() => {
                     <h2>Avocado Smoothie</h2>
                     <p>
                         Come check out our new Avocado smoothies
-                        Come shop now
+                        Check it out
                     </p>
-                        <Link to="/Shop"><button className="btn">Shop now</button></Link>
+                        <Link to="/Shop"><button className="btn">Read more</button></Link>
                 </div>
             </div>
             <div className="item">
@@ -91,7 +91,7 @@ useEffect(() => {
                     <p>
                         New Cake recipes, Varieties of bread and much more
                     </p>
-                   <Link to="/Shop"><button className="btn">Shop now</button></Link>
+                   <Link to="/Shop"><button className="btn">Check it out</button></Link>
                 </div>
             </div>
         </div> 
