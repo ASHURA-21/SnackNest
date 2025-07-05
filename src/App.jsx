@@ -95,7 +95,7 @@ function App() {
     <Route path="/contact" element={<Contact />} />
     <Route path="/Checkout" element={<Checkout />} />
     <Route path="/Card" element={<Card />} />
-    <Route path="/Card" element={<Done />} />
+    <Route path="/Done" element={<Done />} />
     <Route path="*" element={<NotFound />} />
   </Routes>
 </Suspense>

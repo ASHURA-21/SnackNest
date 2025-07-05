@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+  --bg: #fffaf2;
+  --surface: #ffffff;
+  --text: #333333;
+  --accent: #ffa751;
+  --highlight: #ffe259;
+}
+
+[data-theme='dark'] {
+  --bg: #1c1c1c;
+  --surface: #2a2a2a;
+  --text: #f5f5f5;
+  --accent: #ffa751;
+  --highlight: #ffe259;
+}
+
+.notifications-container {
+    width: 320px;
+    height: auto;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    margin-top: 20vh;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  .flex-shrink-0 {
+    flex-shrink: 0;
+  }
+
+  .success {
+    padding: 1rem;
+    border-radius: 0.375rem;
+    background-color: var(--bg);
+  }
+
+  .succes-svg {
+    color: var(--text);
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+  .success-prompt-wrap {
+    margin-left: 0.75rem;
+  }
+
+  .success-prompt-heading {
+    font-weight: bold;
+    color: var(--text);
+  }
+
+  .success-prompt-prompt {
+    margin-top: 0.5rem;
+    color: var(--accent);
+  }
+
+  .success-button-container {
+    display: flex;
+    margin-top: 0.875rem;
+    margin-bottom: -0.375rem;
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+    font-family: 'Roboto';
+  }
+
+  .success-button-main {
+    padding-top: 0.375rem;
+    padding-bottom: 0.375rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    color: #333333;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: bold;
+    border-radius: 0.375rem;
+    border: none
+  }
+
+  .success-button-main:hover {
+    background-color: var(--accent);
+  }
+
+ .link .success-button-secondary {
+    padding-top: 0.375rem;
+    padding-bottom: 0.375rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    margin-left: 0.75rem;
+    background-color: var(--text);
+    color: var(--surface);
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    border-radius: 0.375rem;
+    border: none;
+    font-weight: 500;
+  }
+
+   .success-button-secondary:hover{
+             background-color: var(--accent);
+             color: var(--text);
+             font-weight: 600;
+   }
