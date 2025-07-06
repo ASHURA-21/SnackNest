@@ -46,7 +46,7 @@ useEffect(() => {
                     <p>
                         Check out our new recipes, smoothies, healthy, delicious meals and more
                     </p>
-                    <Link to="/Recipes"><button className="btn">Check them out</button></Link>
+                    <Link to="/Recipes"><button className="btn">Check it out</button></Link>
                 </div>
             </div>
             <div className="item">

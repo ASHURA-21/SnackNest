@@ -85,7 +85,7 @@ function App() {
 )}
 
 
-{location.pathname !== "/Checkout" && location.pathname !== "/Card" && <CartIcon />}
+{location.pathname !== "/Checkout" && location.pathname !== "/Card" && location.pathname !=="/Done" && <CartIcon />}
 <Suspense fallback={<Loader />}>
   <Routes>
     <Route path="/" element={<Home />} />
