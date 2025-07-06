@@ -1,6 +1,6 @@
 // SignupModal.js
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 const SignupModal = ({ show, onClose, switchToLogin }) => {
   if (!show) return null;
@@ -104,6 +104,17 @@ const Backdrop = styled.div`
   align-items: center;
 `;
 
+const slideInBottom = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
+
 const StyledWrapper = styled.div`
   .container {
     display: flex;
@@ -176,6 +187,15 @@ const StyledWrapper = styled.div`
     color: #264143;
     cursor: pointer;
   }
+.form_area {
+  background-color: #EDDCD9;
+  border: 2px solid #264143;
+  border-radius: 20px;
+  box-shadow: 3px 4px 0px 1px #E99F4C;
+  padding: 30px;
+  animation: ${slideInBottom} 0.4s ease-out forwards;
+}
+
 `;
 
 

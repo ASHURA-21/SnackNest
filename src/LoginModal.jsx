@@ -1,6 +1,6 @@
 // LoginModal.js
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 const LoginModal = ({ show, onClose, switchToSignup }) => {
   if (!show) return null;
@@ -78,6 +78,25 @@ const LoginModal = ({ show, onClose, switchToSignup }) => {
 
 export default LoginModal;
 
+const slideInFromBottom = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
+
+const fadeInBackdrop = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
 
 const Backdrop = styled.div`
   position: fixed;
@@ -90,7 +109,9 @@ const Backdrop = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: ${fadeInBackdrop} 0.3s ease-out forwards;
 `;
+
 
 const StyledWrapper = styled.div`
   .container {
@@ -101,13 +122,14 @@ const StyledWrapper = styled.div`
     text-align: center;
   }
 
-  .form_area {
-    background-color: #D6E4E5;
-    border: 2px solid #1C315E;
-    border-radius: 20px;
-    box-shadow: 3px 4px 0px 1px #98A8F8;
-    padding: 30px;
-  }
+.form_area {
+  background-color: #D6E4E5;
+  border: 2px solid #1C315E;
+  border-radius: 20px;
+  box-shadow: 3px 4px 0px 1px #98A8F8;
+  padding: 30px;
+  animation: ${slideInFromBottom} 0.4s ease-out forwards;
+}
 
   .title {
     color: #1C315E;

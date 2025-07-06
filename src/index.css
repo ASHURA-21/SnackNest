@@ -101,6 +101,37 @@ body {
   z-index: 1001;
 }
 
+/* Keyframes */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.navbar {
+  animation: slideDown 0.6s ease-out;
+}
+
+@keyframes fadeSlideDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.nav-list.mobile-active {
+  animation: fadeSlideDown 0.4s ease forwards;
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
   body{
