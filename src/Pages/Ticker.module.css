@@ -1,4 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 .wrapper {
   background: #E28413;
   color: #EDF2EF;
@@ -11,32 +16,35 @@
   z-index: 999;
   font-family: 'Fredoka';
   cursor: pointer;
+  box-sizing: border-box;
 }
 
 .ticker {
   display: flex;
   white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
 }
 
 .content {
-  display: flex;
+  display: inline-flex;
   animation: scroll-left 30s linear infinite;
+  min-width: 100%;
 }
 .content:hover {
   animation-play-state: paused;
 }
 
-
 .item {
   margin-right: 30px;
+  flex-shrink: 0;
 }
 
 @keyframes scroll-left {
   0% {
-    transform: translateX(0);
+    transform: translateX(0%);
   }
   100% {
     transform: translateX(-50%);
   }
 }
-

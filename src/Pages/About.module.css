@@ -115,4 +115,9 @@
     align-items: center;  
     padding: auto;
   }
+
+  .image{
+    width: 400px;
+    height: 400px;
+  }
 }
