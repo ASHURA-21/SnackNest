@@ -37,40 +37,42 @@ import Chicken from '../assets/Chicken.jpeg'
 export default function Home() {
   const { addToCart } = useCart();
 
-  const HomeProducts = {
-    'Fruits & Vegetables': [
-      { name: 'Strawberries', description: 'Vibrant red, sweet, eye-catching', price: 100, image: Strawberry },
-      { name: 'Mangoes', description: 'Tropical, juicy, golden-yellow', price: 500, image: Mango },
-      { name: 'Grapes', description: 'Compact, colorful (green or purple)', price: 1000, image: Grapes },
-      { name: 'Brocoli', description: 'Bright green, healthy and crunchy', price: 6000, image: Brocoli },
-      { name: 'Carrots', description: 'Orange, crisp, kid-friendly', price: 4500, image: Carrots },
-      { name: 'Bell Peppers', description: 'Colorful (red/yellow/green), versatile', price: 3000, image: Peppers },
-    ],
-    'Baked Goods': [
-      { name: 'Croissants', description: 'Golden, flaky, and buttery – perfect for breakfast or a quick snack.', price: 250, image: Cross },
-      { name: 'Chocolate Chip Cookies', description: 'Soft, chewy, and loaded with chocolate chips.', price: 400, image: Chip },
-      { name: 'Sourdough Bread', description: 'Artisan-style sourdough with a crisp crust and soft interior.', price: 380, image: Sour },
-      { name: 'Blueberry Muffins', description: 'Moist muffins packed with fresh blueberries.', price: 220, image: Muffin },
-      { name: 'Cinnamon Rolls', description: 'Swirled with cinnamon sugar and topped with vanilla glaze.', price: 300, image: Cinnamon },
-      { name: 'Banana Bread', description: 'Banana loaf with a hint of vanilla and walnut crunch.', price: 450, image: BananaBread },
-    ],
-    'Nigerian Delicacies': [
-      { name: 'Jollof Rice with Plantain', description: 'Party-style jollof with plantain and grilled chicken.', price: 2500, image: Jollof },
-      { name: 'Egusi Soup with Pounded Yam', description: 'Melon seed soup with assorted meat and greens.', price: 3000, image: Egusi },
-      { name: 'Moi Moi', description: 'Spicy bean pudding wrapped in leaves or foil.', price: 800, image: Moi },
-      { name: 'Ofada Rice & Ayamase Sauce', description: 'Rice with spicy green pepper stew and meats.', price: 3200, image: Ofada },
-      { name: 'Suya Skewers', description: 'Grilled beef skewers with suya spice and onions.', price: 1500, image: Suya },
-      { name: 'Akara', description: 'Deep-fried bean balls – crispy outside, soft inside.', price: 500, image: Akara },
-    ],
-    'Kitchen Utensils': [
-      { name: 'Non-Stick Frying Pan', description: 'Quick cooking with minimal oil.', price: 5000, image: Pan },
-      { name: 'Knife Set', description: 'Chef’s, bread & paring knives with block.', price: 12000, image: Knife },
-      { name: 'Wooden Spoon Set', description: 'Great for stirring stews, soups, etc.', price: 2000, image: Spoons },
-      { name: 'Digital Kitchen Scale', description: 'Accurate baking and portioning.', price: 4500, image: Weigh },
-      { name: 'Hand Whisk', description: 'For beating eggs, mixing, etc.', price: 1500, image: Whisk },
-      { name: 'Grater & Slicer Combo', description: 'Multifunctional kitchen tool.', price: 3000, image: Grate },
-    ]
-  };
+const HomeProducts = {
+  'Fruits & Vegetables': [
+    { name: 'Strawberries', description: 'Vibrant red, sweet, eye-catching', price: 2500, image: Strawberry },
+    { name: 'Mangoes', description: 'Tropical, juicy, golden-yellow', price: 800, image: Mango },
+    { name: 'Grapes', description: 'Compact, colorful (green or purple)', price: 3500, image: Grapes },
+    { name: 'Brocoli', description: 'Bright green, healthy and crunchy', price: 2000, image: Brocoli },
+    { name: 'Carrots', description: 'Orange, crisp, kid-friendly', price: 1200, image: Carrots },
+    { name: 'Bell Peppers', description: 'Colorful (red/yellow/green), versatile', price: 1500, image: Peppers },
+  ],
+  'Baked Goods': [
+    { name: 'Croissants', description: 'Golden, flaky, and buttery – perfect for breakfast or a quick snack.', price: 700, image: Cross },
+    { name: 'Chocolate Chip Cookies', description: 'Soft, chewy, and loaded with chocolate chips.', price: 900, image: Chip },
+    { name: 'Sourdough Bread', description: 'Artisan-style sourdough with a crisp crust and soft interior.', price: 1500, image: Sour },
+    { name: 'Blueberry Muffins', description: 'Moist muffins packed with fresh blueberries.', price: 800, image: Muffin },
+    { name: 'Cinnamon Rolls', description: 'Swirled with cinnamon sugar and topped with vanilla glaze.', price: 1000, image: Cinnamon },
+    { name: 'Banana Bread', description: 'Banana loaf with a hint of vanilla and walnut crunch.', price: 1200, image: BananaBread },
+  ],
+  'Nigerian Delicacies': [
+    { name: 'Jollof Rice with Plantain', description: 'Party-style jollof with plantain and grilled chicken.', price: 2800, image: Jollof },
+    { name: 'Egusi Soup with Pounded Yam', description: 'Melon seed soup with assorted meat and greens.', price: 3500, image: Egusi },
+    { name: 'Moi Moi', description: 'Spicy bean pudding wrapped in leaves or foil.', price: 1000, image: Moi },
+    { name: 'Ofada Rice & Ayamase Sauce', description: 'Rice with spicy green pepper stew and meats.', price: 3700, image: Ofada },
+    { name: 'Suya Skewers', description: 'Grilled beef skewers with suya spice and onions.', price: 2000, image: Suya },
+    { name: 'Akara', description: 'Deep-fried bean balls – crispy outside, soft inside.', price: 800, image: Akara },
+  ],
+  'Kitchen Utensils': [
+    { name: 'Non-Stick Frying Pan', description: 'Quick cooking with minimal oil.', price: 8000, image: Pan },
+    { name: 'Knife Set', description: 'Chef’s, bread & paring knives with block.', price: 18000, image: Knife },
+    { name: 'Wooden Spoon Set', description: 'Great for stirring stews, soups, etc.', price: 3500, image: Spoons },
+    { name: 'Digital Kitchen Scale', description: 'Accurate baking and portioning.', price: 7000, image: Weigh },
+    { name: 'Hand Whisk', description: 'For beating eggs, mixing, etc.', price: 2500, image: Whisk },
+    { name: 'Grater & Slicer Combo', description: 'Multifunctional kitchen tool.', price: 5000, image: Grate },
+  ]
+};
+
+
 
   return (
     <>
@@ -90,7 +92,7 @@ export default function Home() {
                   <span>{item.description}</span>
                   <p>{item.price.toLocaleString('en-NG', {
                     style: 'currency',
-                    currency: item.price > 1000 ? 'NGN' : 'GBP'
+                    currency: 'NGN'
                   })}</p>
                   <button className="btn" onClick={() => addToCart(item)}>
                     Add to Cart
