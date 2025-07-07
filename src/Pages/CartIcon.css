@@ -14,9 +14,9 @@
   --highlight: #ffe259;
 }
 .cart-icon-wrapper {
-  position: fixed;
-  /* top: 0px; */
-  bottom: 60px;
+ position: fixed;
+  bottom: 60px; /* <== This places it above the bottom of the screen */
+  right: 20px;
   right: 20px;
   z-index: 1000;
   cursor: pointer;
@@ -92,10 +92,9 @@
 
 @media (max-width:480px){
   .cart-icon-wrapper{
-      position: fixed;
-      top: 60px;
-      bottom: 50px;
-      right: 10px;
-      z-index: 1000;
+ position: fixed;
+  bottom: 100px; /* <== This places it above the bottom of the screen */
+  right: 10px;
+  z-index: 1000;
   }
 }

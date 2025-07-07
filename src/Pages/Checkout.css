@@ -283,11 +283,140 @@ padding: 1.1em 2em;
  transform: scale(0.9);
 }
 
-@media(max-width:480px){
+.link .checkout--footer{
+  text-decoration: none;
+}
+
+@media (max-width: 1024px) {
+  .card {
+    width: 90%;
+  }
+
+  .cart .products .product {
+    grid-template-columns: 50px 1fr;
+    gap: 10px;
+  }
+
+  .checkout .details {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .home a {
+    padding: 20px;
+  }
+
+  .checkout .btn {
+    padding: 1em 1.5em;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .master-container {
+    margin-top: 15px;
+    padding: 0 10px;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .cart .products .product {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .cart .products .product span,
+  .cart .products .product p {
+    font-size: 12px;
+  }
+
+  .checkout .details {
+    grid-template-columns: 1fr;
+    text-align: left;
+    padding: 10px 5px;
+  }
+
+  .price {
+    font-size: 18px;
+  }
+
+  .checkout .btn {
+    font-size: 13px;
+    width: 100%;
+    padding: 1em;
+    margin-top: 10px;
+  }
+
+  .coupons form {
+    grid-template-columns: 1fr;
+  }
+
+  .input_field {
+    width: 100%;
+  }
+
+  .home a {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 10px;
+  }
+
+  .cart .products .product span,
+  .cart .products .product p {
+    font-size: 11px;
+  }
+
+  .checkout .details span {
+    font-size: 12px;
+  }
+
+  .checkout .btn {
+    font-size: 12px;
+  }
+
+  .price {
+    font-size: 16px;
+  }
+
+  .price sub {
+    font-size: 10px;
+  }
+
+.cart .products .product {
+  display: grid;
+  grid-template-columns: 80px 1fr 80px 1fr;
+  align-items: center; /* center vertically */
+  gap: 10px;
+}
+
+.cart .products .product img {
+  display: block;
+  margin: auto;
+  border-radius: 12px;
+  object-fit: contain;
+  width: 60px;
+  height: 60px;
+}
+
+.checkout--footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+}
+
+
+/* @media(max-width:480px){
   .master-container{
     text-align: center;
     font-size: 300px;
     font-weight: 500;
     width: 424px;
   }
-}
+} */

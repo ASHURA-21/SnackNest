@@ -7,72 +7,73 @@ import { useCart } from './CartContext';
 export default function Shop() {
   const { addToCart } = useCart();
 
-  const products = {
-    'Fruits & Vegetables': [
-      { name: 'Strawberries', description: 'Vibrant red, sweet, eye-catching', price: 100, image: ImageMap.Strawberry },
-      { name: 'Mangoes', description: 'Tropical, juicy, golden-yellow', price: 500, image: ImageMap.Mango },
-      { name: 'Grapes', description: 'Compact, colorful (green or purple)', price: 1000, image: ImageMap.Grapes },
-      { name: 'Bananas', description: 'Great as a snack, in pancakes, or with cereal', price: 4000, image: ImageMap.Banana },
-      { name: 'Tangerines', description: 'Small, sweet, and easy to peel.', price: 5000, image: ImageMap.Tangerine },
-      { name: 'Pineapples', description: 'Sweet and tangy — ideal for juicing or desserts.', price: 1000, image: ImageMap.Pineapple },
-      { name: 'Blueberries', description: 'Antioxidant-rich and great for baking.', price: 1000, image: ImageMap.BlueBerry },
-      { name: 'Oranges', description: 'Packed with vitamin C, great for juicing.', price: 1000, image: ImageMap.Oranges },
-      { name: 'Papayas', description: 'Soft, sweet, and good for digestion.', price: 1000, image: ImageMap.Papayas },
-      { name: 'Watermelons', description: 'Hydrating and refreshing, perfect for hot days.', price: 7000, image: ImageMap.Watermelon },
-      { name: 'Pears', description: 'Mild and juicy — a kid favorite.', price: 8000, image: ImageMap.Pears },
-      { name: 'Brocoli', description: 'Bright green, healthy and crunchy', price: 6000, image: ImageMap.Brocoli },
-      { name: 'Carrots', description: 'Orange, crisp, kid-friendly', price: 4500, image: ImageMap.Carrots },
-      { name: 'Bell Peppers', description: 'Colorful (red/yellow/green), versatile', price: 3000, image: ImageMap.Peppers },
-      { name: 'Spinach', description: 'A leafy green superfood rich in iron', price: 6000, image: ImageMap.Spinach },
-      { name: 'Tomatoes', description: 'Fresh for salads, cooking, or sandwiches.', price: 2000, image: ImageMap.Tomato },
-      { name: 'Cabbage', description: 'Crunchy, versatile in stir-fries or slaws.', price: 4000, image: ImageMap.Cabbage },
-      { name: 'Lettuce', description: 'Crisp, great for salads and wraps.', price: 6500, image: ImageMap.Lettuce },
-      { name: 'Zucchini', description: 'Soft texture — great for sautéing or baking.', price: 4900, image: ImageMap.Zucchini },
-      { name: 'Onions', description: 'A kitchen staple for savory dishes.', price: 6800, image: ImageMap.Onions },
-      { name: 'Sweet Potatoes', description: 'Naturally sweet, full of fiber and vitamins.', price: 6000, image: ImageMap.Potato }
-    ],
-    'Baked Goods': [
-      { name: 'Croissants', description: 'Golden, flaky, and buttery – perfect for breakfast or a quick snack.', price: 250, image: ImageMap.Cross },
-      { name: 'Chocolate Chip Cookies', description: 'Soft, chewy, and loaded with chocolate chips.', price: 400, image: ImageMap.Chip },
-      { name: 'Sourdough Bread', description: 'Artisan-style sourdough with a crisp crust and soft interior.', price: 380, image: ImageMap.Sour },
-      { name: 'Blueberry Muffins', description: 'Moist muffins packed with fresh blueberries.', price: 220, image: ImageMap.Muffin },
-      { name: 'Cinnamon Rolls', description: 'Swirled with cinnamon sugar and topped with vanilla glaze.', price: 300, image: ImageMap.Cinnamon },
-      { name: 'Banana Bread', description: 'Banana loaf with a hint of vanilla and walnut crunch.', price: 450, image: ImageMap.BananaBread },
-      { name: 'Cupcakes', description: 'Mini cakes with colorful frosting — fun and sweet.', price: 550, image: ImageMap.CupCake },
-      { name: 'Baguettes', description: 'Crusty on the outside, soft inside — great with soups or spreads.', price: 750, image: ImageMap.Baguette },
-      { name: 'Meat Pies', description: 'Savory and satisfying — stuffed with spiced meats or veggies.', price: 250, image: ImageMap.MeatPie },
-      { name: 'Puff Pastries', description: 'Light, layered dough — can be sweet or savory.', price: 250, image: ImageMap.Puff },
-      { name: 'Donuts', description: 'Glazed, filled, or sprinkled — a sweet tooth’s dream.', price: 550, image: ImageMap.Donuts },
-      { name: 'Apple Pie', description: 'Sweet apple filling with a golden crust.', price: 950, image: ImageMap.Pie },
-      { name: 'Vanilla Loaf Cake', description: 'Soft, lightly sweetened, perfect with tea or coffee.', price: 750, image: ImageMap.Vanilla },
-      { name: 'Cheese Rolls', description: 'Savory and cheesy, soft with a golden top.', price: 550, image: ImageMap.Cheese },
-      { name: 'Garlic Bread', description: 'Warm, buttery, and loaded with garlic flavor.', price: 650, image: ImageMap.Garlic }
-    ],
-    'Nigerian Delicacies': [
-      { name: 'Jollof Rice with Plantain', description: 'Party-style jollof with plantain and grilled chicken.', price: 2500, image: ImageMap.Jollof },
-      { name: 'Egusi Soup with Pounded Yam', description: 'Melon seed soup with assorted meat and greens.', price: 3000, image: ImageMap.Egusi },
-      { name: 'Moi Moi', description: 'Spicy bean pudding wrapped in leaves or foil.', price: 800, image: ImageMap.Moi },
-      { name: 'Ofada Rice & Ayamase Sauce', description: 'Rice with spicy green pepper stew and meats.', price: 3200, image: ImageMap.Ofada },
-      { name: 'Suya Skewers', description: 'Grilled beef skewers with suya spice and onions.', price: 1500, image: ImageMap.Suya },
-      { name: 'Akara', description: 'Deep-fried bean balls – crispy outside, soft inside.', price: 500, image: ImageMap.Akara },
-      { name: 'Fried Rice & Plantain', description: 'Stir-fried rice with liver and sweet plantain.', price: 800, image: ImageMap.rice },
-      { name: 'Okra Soup with Swallow', description: 'Cooked with meat and fish, served with swallow.', price: 600, image: ImageMap.Okra },
-      { name: 'Asun', description: 'Grilled spicy goat meat.', price: 900, image: ImageMap.Asun },
-      { name: 'Ewa Agoyin', description: 'Mashed beans with spicy stew and plantain.', price: 900, image: ImageMap.Beans },
-      { name: 'Boli & Groundnut', description: 'Roasted plantain with groundnuts.', price: 300, image: ImageMap.Boli },
-      { name: 'Nkwobi', description: 'Cow foot in spicy palm oil sauce.', price: 100, image: ImageMap.Nkwobi },
-      { name: 'Pepper Soup', description: 'Spicy broth with meat or fish.', price: 300, image: ImageMap.Soup },
-      { name: 'Amala with Gbegiri & Ewedu', description: 'Yam flour with beans and jute leaf soups.', price: 500, image: ImageMap.Amala }
-    ],
-    'Kitchen Utensils': [
-      { name: 'Non-Stick Frying Pan', description: 'Quick cooking with minimal oil.', price: 5000, image: ImageMap.Pan },
-      { name: 'Knife Set', description: 'Chef’s, bread & paring knives with block.', price: 12000, image: ImageMap.Knife },
-      { name: 'Wooden Spoon Set', description: 'Great for stirring stews, soups, etc.', price: 2000, image: ImageMap.Spoons },
-      { name: 'Digital Kitchen Scale', description: 'Accurate baking and portioning.', price: 4500, image: ImageMap.Weigh },
-      { name: 'Hand Whisk', description: 'For beating eggs, mixing, etc.', price: 1500, image: ImageMap.Whisk },
-      { name: 'Grater & Slicer Combo', description: 'Multifunctional kitchen tool.', price: 3000, image: ImageMap.Grate }
-    ]
-  };
+ const products = {
+  'Fruits & Vegetables': [
+    { name: 'Strawberries', description: 'Vibrant red, sweet, eye-catching', price: 1459, image: ImageMap.Strawberry },
+    { name: 'Mangoes', description: 'Tropical, juicy, golden-yellow', price: 378, image: ImageMap.Mango },
+    { name: 'Grapes', description: 'Compact, colorful (green or purple)', price: 201, image: ImageMap.Grapes },
+    { name: 'Bananas', description: 'Great as a snack, in pancakes, or with cereal', price: 713, image: ImageMap.Banana },
+    { name: 'Tangerines', description: 'Small, sweet, and easy to peel.', price: 651, image: ImageMap.Tangerine },
+    { name: 'Pineapples', description: 'Sweet and tangy — ideal for juicing or desserts.', price: 607, image: ImageMap.Pineapple },
+    { name: 'Blueberries', description: 'Antioxidant-rich and great for baking.', price: 435, image: ImageMap.BlueBerry },
+    { name: 'Oranges', description: 'Packed with vitamin C, great for juicing.', price: 359, image: ImageMap.Oranges },
+    { name: 'Papayas', description: 'Soft, sweet, and good for digestion.', price: 1266, image: ImageMap.Papayas },
+    { name: 'Watermelons', description: 'Hydrating and refreshing, perfect for hot days.', price: 328, image: ImageMap.Watermelon },
+    { name: 'Pears', description: 'Mild and juicy — a kid favorite.', price: 1359, image: ImageMap.Pears },
+    { name: 'Brocoli', description: 'Bright green, healthy and crunchy', price: 1014, image: ImageMap.Brocoli },
+    { name: 'Carrots', description: 'Orange, crisp, kid-friendly', price: 215, image: ImageMap.Carrots },
+    { name: 'Bell Peppers', description: 'Colorful (red/yellow/green), versatile', price: 211, image: ImageMap.Peppers },
+    { name: 'Spinach', description: 'A leafy green superfood rich in iron', price: 341, image: ImageMap.Spinach },
+    { name: 'Tomatoes', description: 'Fresh for salads, cooking, or sandwiches.', price: 597, image: ImageMap.Tomato },
+    { name: 'Cabbage', description: 'Crunchy, versatile in stir-fries or slaws.', price: 626, image: ImageMap.Cabbage },
+    { name: 'Lettuce', description: 'Crisp, great for salads and wraps.', price: 1184, image: ImageMap.Lettuce },
+    { name: 'Zucchini', description: 'Soft texture — great for sautéing or baking.', price: 1382, image: ImageMap.Zucchini },
+    { name: 'Onions', description: 'A kitchen staple for savory dishes.', price: 204, image: ImageMap.Onions },
+    { name: 'Sweet Potatoes', description: 'Naturally sweet, full of fiber and vitamins.', price: 1299, image: ImageMap.Potato }
+  ],
+  'Baked Goods': [
+    { name: 'Croissants', description: 'Golden, flaky, and buttery – perfect for breakfast or a quick snack.', price: 657, image: ImageMap.Cross },
+    { name: 'Chocolate Chip Cookies', description: 'Soft, chewy, and loaded with chocolate chips.', price: 1716, image: ImageMap.Chip },
+    { name: 'Sourdough Bread', description: 'Artisan-style sourdough with a crisp crust and soft interior.', price: 1580, image: ImageMap.Sour },
+    { name: 'Blueberry Muffins', description: 'Moist muffins packed with fresh blueberries.', price: 1686, image: ImageMap.Muffin },
+    { name: 'Cinnamon Rolls', description: 'Swirled with cinnamon sugar and topped with vanilla glaze.', price: 1366, image: ImageMap.Cinnamon },
+    { name: 'Banana Bread', description: 'Banana loaf with a hint of vanilla and walnut crunch.', price: 1109, image: ImageMap.BananaBread },
+    { name: 'Cupcakes', description: 'Mini cakes with colorful frosting — fun and sweet.', price: 701, image: ImageMap.CupCake },
+    { name: 'Baguettes', description: 'Crusty on the outside, soft inside — great with soups or spreads.', price: 1169, image: ImageMap.Baguette },
+    { name: 'Meat Pies', description: 'Savory and satisfying — stuffed with spiced meats or veggies.', price: 1456, image: ImageMap.MeatPie },
+    { name: 'Puff Pastries', description: 'Light, layered dough — can be sweet or savory.', price: 819, image: ImageMap.Puff },
+    { name: 'Donuts', description: 'Glazed, filled, or sprinkled — a sweet tooth’s dream.', price: 1907, image: ImageMap.Donuts },
+    { name: 'Apple Pie', description: 'Sweet apple filling with a golden crust.', price: 263, image: ImageMap.Pie },
+    { name: 'Vanilla Loaf Cake', description: 'Soft, lightly sweetened, perfect with tea or coffee.', price: 1804, image: ImageMap.Vanilla },
+    { name: 'Cheese Rolls', description: 'Savory and cheesy, soft with a golden top.', price: 1900, image: ImageMap.Cheese },
+    { name: 'Garlic Bread', description: 'Warm, buttery, and loaded with garlic flavor.', price: 576, image: ImageMap.Garlic }
+  ],
+  'Nigerian Delicacies': [
+    { name: 'Jollof Rice with Plantain', description: 'Party-style jollof with plantain and grilled chicken.', price: 3359, image: ImageMap.Jollof },
+    { name: 'Egusi Soup with Pounded Yam', description: 'Melon seed soup with assorted meat and greens.', price: 2231, image: ImageMap.Egusi },
+    { name: 'Moi Moi', description: 'Spicy bean pudding wrapped in leaves or foil.', price: 1893, image: ImageMap.Moi },
+    { name: 'Ofada Rice & Ayamase Sauce', description: 'Rice with spicy green pepper stew and meats.', price: 1638, image: ImageMap.Ofada },
+    { name: 'Suya Skewers', description: 'Grilled beef skewers with suya spice and onions.', price: 1136, image: ImageMap.Suya },
+    { name: 'Akara', description: 'Deep-fried bean balls – crispy outside, soft inside.', price: 1381, image: ImageMap.Akara },
+    { name: 'Fried Rice & Plantain', description: 'Stir-fried rice with liver and sweet plantain.', price: 1878, image: ImageMap.rice },
+    { name: 'Okra Soup with Swallow', description: 'Cooked with meat and fish, served with swallow.', price: 918, image: ImageMap.Okra },
+    { name: 'Asun', description: 'Grilled spicy goat meat.', price: 879, image: ImageMap.Asun },
+    { name: 'Ewa Agoyin', description: 'Mashed beans with spicy stew and plantain.', price: 2056, image: ImageMap.Beans },
+    { name: 'Boli & Groundnut', description: 'Roasted plantain with groundnuts.', price: 896, image: ImageMap.Boli },
+    { name: 'Nkwobi', description: 'Cow foot in spicy palm oil sauce.', price: 1970, image: ImageMap.Nkwobi },
+    { name: 'Pepper Soup', description: 'Spicy broth with meat or fish.', price: 1908, image: ImageMap.Soup },
+    { name: 'Amala with Gbegiri & Ewedu', description: 'Yam flour with beans and jute leaf soups.', price: 2972, image: ImageMap.Amala }
+  ],
+  'Kitchen Utensils': [
+    { name: 'Non-Stick Frying Pan', description: 'Quick cooking with minimal oil.', price: 5333, image: ImageMap.Pan },
+    { name: 'Knife Set', description: 'Chef’s, bread & paring knives with block.', price: 14223, image: ImageMap.Knife },
+    { name: 'Wooden Spoon Set', description: 'Great for stirring stews, soups, etc.', price: 1711, image: ImageMap.Spoons },
+    { name: 'Digital Kitchen Scale', description: 'Accurate baking and portioning.', price: 12955, image: ImageMap.Weigh },
+    { name: 'Hand Whisk', description: 'For beating eggs, mixing, etc.', price: 8527, image: ImageMap.Whisk },
+    { name: 'Grater & Slicer Combo', description: 'Multifunctional kitchen tool.', price: 9785, image: ImageMap.Grate }
+  ]
+};
+
 
   return (
     <>
@@ -90,7 +91,7 @@ export default function Shop() {
                   <span>{item.description}</span>
                   <p>{item.price.toLocaleString('en-NG', {
                     style: 'currency',
-                    currency: item.price > 1000 ? 'NGN' : 'GBP'
+                    currency: 'NGN'
                   })}</p>
                   <button
                     className={Styles.btn}

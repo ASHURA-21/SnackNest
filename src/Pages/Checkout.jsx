@@ -29,7 +29,7 @@ const total = subtotal - discount + shipping;
           <div className="products">
           {cart.map((item, index) => (
   <div className="product" key={index}>
-    <img src={item.image} alt={item.name} width={60} height={60} />
+    <img src={item.image} alt={item.name} width={60} height={60} className='image'/>
     <div>
       <span>{item.name}</span>
       <p>{item.description}</p>
@@ -47,7 +47,7 @@ const total = subtotal - discount + shipping;
         </svg>
       </button>
     </div>
-    <label className="price small">${(item.price * item.quantity).toFixed(2)}</label>
+    <label className="price small">₦{(item.price * item.quantity).toFixed(2)}</label>
   </div>
 ))}
 
@@ -65,17 +65,17 @@ const total = subtotal - discount + shipping;
           <label className="title">Checkout</label>
           <div className="details">
          <span>Your cart subtotal:</span>
-  <span>${subtotal.toFixed(2)}</span>
+  <span>₦{subtotal.toFixed(2)}</span>
   <span>Discount through applied coupons:</span>
-  <span>${discount.toFixed(2)}</span>
+  <span>₦{discount.toFixed(2)}</span>
   <span>Shipping fees:</span>
-  <span>${shipping.toFixed(2)}</span>
+  <span>₦{shipping.toFixed(2)}</span>
           </div>
 
           
-       <Link to='/Card'>
+       <Link to='/Card' className='link'>
           <div className="checkout--footer">
-             <label className="price"><sup>$</sup>{total.toFixed(2)}</label>
+             <label className="price"><sup>₦</sup>{total.toFixed(2)}</label>
              {/* <button className="checkout-btn">Checkout</button> */}
                    <button className="btn">Checkout</button>
           </div>
