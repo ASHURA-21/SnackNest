@@ -37,9 +37,11 @@ function App() {
       <div style={{ paddingTop: "50px" }}>
 
      <nav className="navbar">
+  <Link to='/' className="home">
   <h2>
     <img src={nest} alt="Brand_logo"/>
   </h2>
+  </Link>
 
   {/* Desktop Nav */}
   <ul className="nav-list desktop-only">
@@ -56,7 +58,6 @@ function App() {
   </div>
 
   <div className="buttons desktop-only">
-        <ThemeToggle /> 
     <button className="button" onClick={() => setShowLogin(true)}>Login</button>
     <button className="button" onClick={() => setShowSignup(true)}>Sign Up</button>
   </div>
@@ -71,13 +72,17 @@ function App() {
 {isMobileOpen && (
   <>
     <ul className="nav-list mobile-active">
+  <li className="nav-icons">
+    <div className="icon-wrapper">
       <Search />
+      <ThemeToggle />
+    </div>
+  </li>
       <li className="nav-links"><Link to="/" onClick={() => setIsMobileOpen(false)}>Home</Link></li>
       <li className="nav-links"><Link to="/about" onClick={() => setIsMobileOpen(false)}>About Us</Link></li>
       <li className="nav-links"><Link to="/Recipes" onClick={() => setIsMobileOpen(false)}>Recipes</Link></li>
       <li className="nav-links"><Link to="/shop" onClick={() => setIsMobileOpen(false)}>Shop now</Link></li>
       <li className="nav-links"><Link to="/contact" onClick={() => setIsMobileOpen(false)}>Contact us</Link></li>
-       <ThemeToggle /> 
       <button className="button" onClick={() => { setShowLogin(true); setIsMobileOpen(false); }}>Login</button>
       <button className="button" onClick={() => { setShowSignup(true); setIsMobileOpen(false); }}>Sign Up</button>
     </ul>
