@@ -74,7 +74,9 @@ function App() {
     <ul className="nav-list mobile-active">
   <li className="nav-icons">
     <div className="icon-wrapper">
-      <Search />
+<div className="search-wrapper">
+  <Search />
+</div>
       <ThemeToggle />
     </div>
   </li>
