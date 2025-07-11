@@ -155,3 +155,17 @@ body{
     line-height: 40px;
     font-family: 'Fredoka';
 }
+
+a {
+  position: relative;
+  display: inline-block;
+  color: var(--text);
+  transition: color 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+}
+
+a:hover {
+  transform: translateY(-2px);
+  color: var(--highlight);
+}
+

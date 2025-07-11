@@ -18,6 +18,7 @@ return(
           <h3 className="heading">Quick Links</h3>
           <ul className="foot-list">
             <li><Link to="/" className="list-items">Home</Link></li>
+            <li><Link to="/shop" className="list-items">Shop</Link></li>
             <li><Link to="/about" className="list-items">About Us</Link></li>
             <li><Link to="/contact" className="list-items">Contact Us</Link></li>
             <li><Link to="/recipes" className="list-items">Recipes</Link></li>
@@ -27,9 +28,8 @@ return(
         <div className="info-types">
           <h3 className="heading">More</h3>
           <ul className="foot-list">
-            <li><Link to="/baked-goods" className="list-items">Baked Goods</Link></li>
-            <li><Link to="/fruits" className="list-items">Fruits & Vegetables</Link></li>
-            <li><Link to="/shop" className="list-items">Shop</Link></li>
+            <li><Link to="/shop" className="list-items">Baked Goods</Link></li>
+            <li><Link to="/shop" className="list-items">Fruits & Vegetables</Link></li>
           </ul>
         </div>
 

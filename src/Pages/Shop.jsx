@@ -78,6 +78,9 @@ export default function Shop() {
   return (
     <>
       <div className={Styles.cards}>
+    <div className="header">
+      <h1>Shop Fresh, Shop Local – Straight from Our Nest to Yours</h1>
+    </div>
         {Object.entries(products).map(([category, items]) => (
           <div key={category} className={Styles.cards1}>
             <h2>{category}</h2>

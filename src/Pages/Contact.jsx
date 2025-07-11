@@ -51,11 +51,11 @@ export default function Contact() {
 
                 <div className={Styles.header}>
           <h1>Other Ways you can Reach us.</h1>
-<ul>
-  <li>📧 Email: support@yourwebsite.com</li>
-  <li>📞 Phone: +234 xxx xxx xxxx</li>
-  <li>📍 Address (if you have one)</li>
-  <li>⏰ Business hours** (e.g., Mon–Fri: 9AM – 5PM)</li>
+<ul className={Styles.list}>
+  <li className={Styles.contactlist}><a href="#">📧 Email: snacknestng@gmail.com</a></li>
+  <li className={Styles.contactlist}><a href="#">📞 Phone: +234 802 123 4567</a></li>
+  <li className={Styles.contactlist}><a href="#">📍 Address: 21 Adebayo Crescent, Lekki Phase 1, Lagos, Nigeria.</a></li>
+  <li className={Styles.contactlist}><a href="#">⏰ Business hours** (Mon–Fri: 9AM – 5PM)</a></li>
 </ul>
         </div>
       </div>
